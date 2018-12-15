@@ -4,7 +4,7 @@
 
                                                             To
 
-                                                          [b]Arnold[/b]
+                                                          Arnold
 
 
 
