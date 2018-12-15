@@ -8,7 +8,7 @@
 
 
 
-                                                 Stay tuned for first drop!
+                                                Stay tuned for first drop!
                                      
                                      
                                      
