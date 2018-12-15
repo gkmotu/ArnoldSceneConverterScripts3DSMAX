@@ -8,11 +8,11 @@
 
 
 
+                                                    Stay tuned for first drop!
 
 
 
 
-Here goes the story about the scripts and the presets.
 
 
 
