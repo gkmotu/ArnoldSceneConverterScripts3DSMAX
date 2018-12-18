@@ -5,23 +5,10 @@
                                                             To
 
                                                           Arnold
+                                                          
 
+Change Log:
 
+18.12.2018
 
-                                                Stay tuned for first drop!
-                                     
-                                     
-                                     
-                                     
-                                     
-                                     
-                                     
-                  License not currently included, but it will be completly free in all forms, naturally!
-
-
-
-
-
-
-
-
+- Added 3DS MAX Legacy bitmap to Arnold Image() - only filename hooked up currently
