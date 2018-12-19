@@ -12,6 +12,7 @@ Change Log:
 19.12.2018
 
 - Vray Material to Arnold Material.
+- Multi/Sub to Arnold Switch Shader.
 
 18.12.2018
 
