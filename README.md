@@ -2,7 +2,7 @@
                           
                                                   Scene converter scripts for
                                                            
-                                                          Arnold & OSL
+                                                         Arnold & OSL
                                                           
 
 Change Log:
@@ -17,6 +17,6 @@ Change Log:
 
 18.12.2018
 
-- 3DS MAX Legacy bitmap to Arnold Image() - filename.
-- Standard Scanline to Arnold Material - Diffuse & Opacity.
+- Legacy Bitmap to Arnold Image() - filename.
+- Standard Scanline Material to Arnold Material - Diffuse & Opacity.
 
