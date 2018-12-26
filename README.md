@@ -4,10 +4,7 @@
                                                            
                                                          Arnold & OSL
 
-
-
-This is a continous effort, new conversion rules will be added over time, and exsisting conversion rules will be upgraded with more features portable as well.
-                                                          
+                                                        
 
 Change Log:
 
