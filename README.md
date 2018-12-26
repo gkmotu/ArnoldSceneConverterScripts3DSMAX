@@ -1,8 +1,8 @@
                           
                           
-                                                  Scene converter scripts
+                                                  Scene converter scripts for
                                                            
-                                                          Arnold
+                                                          Arnold & OSL
                                                           
 
 Change Log:
