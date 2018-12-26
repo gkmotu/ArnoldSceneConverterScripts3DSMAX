@@ -5,6 +5,7 @@
                                                          Arnold & OSL
 
                                              Tested in 3DS MAX 2019.3 before upload.
+                                  Conversion rules are continously added and improved over time.
 
 Change Log:
 
