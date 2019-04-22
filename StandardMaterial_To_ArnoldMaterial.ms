@@ -114,10 +114,10 @@ fn ConvertFrom_StandardToArnold source dest =
 		return undefined
 	)
 
-	-- Put shit here
+	-- Put stuff here
 	Dest.base_color_shader = Source.diffuseMap
 	Dest.opacity_shader = Source.opacityMap
-	-- Put shit here
+	-- Put stuff here
     
   
 )
