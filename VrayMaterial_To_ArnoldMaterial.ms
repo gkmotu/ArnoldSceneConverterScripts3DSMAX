@@ -114,9 +114,9 @@ fn ConvertFrom_VrayMtlToArnoldMtl source dest =
 		return undefined
 	)
 
-	-- Put shit here
+	-- Put stuff here
 	
-	-- Put shit here
+	-- Put stuff here
     
   
 )
