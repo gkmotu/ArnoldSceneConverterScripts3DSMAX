@@ -112,9 +112,9 @@ fn ConvertFrom_BitmapTextureToArnoldImage Source Dest =
 		--Not the suitable nodes
 		return undefined
 	)
-	----- Put shit here
+	----- Put stuff here
 	Dest.filename = Source.fileName
-	----- Put shit here
+	----- Put stuff here
 )
 
 --This function is used as entry when the source is missing (due to a missing plugin) and cannot be completly loaded. 
