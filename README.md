@@ -9,6 +9,15 @@
 
 Change Log:
 
+14.9.2019
+
+Vray to Arnold material
+
+- Added bump to normal conversion, and additonal node is created here.
+- Opacity slot wired up.
+- Diffuse slot wired up.
+
+
 26.12.2018
 
 - Legacy Checker to OSL Checker.
