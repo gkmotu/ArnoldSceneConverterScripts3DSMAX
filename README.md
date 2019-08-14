@@ -15,6 +15,8 @@ Change Log:
 
 Vray to Arnold material
 
+- Diffuse roughness supported.
+- Metalness supported.
 - Added bump to normal conversion, and additonal node is created here.
 - Opacity slot wired up.
 - Diffuse slot wired up.
