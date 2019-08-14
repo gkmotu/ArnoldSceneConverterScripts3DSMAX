@@ -7,6 +7,8 @@ v0.1a
 
 Supported slots and functions:
 
+- Metalness
+- Diffuse Roughness
 - Diffuse color
 - Diffuse Texture
 - Opacity
