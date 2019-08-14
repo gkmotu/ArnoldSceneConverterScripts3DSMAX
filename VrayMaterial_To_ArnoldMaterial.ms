@@ -125,6 +125,12 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 	aiSSurface.base_color = source.diffuse
+	
+	aiSSurface.diffuse_roughness = source.texmap_roughness_multiplier
+	aiSSurface.diffuse_roughness_connected = source.texmap_roughness_on
+	aiSSurface.diffuse_roughness_shader = source.texmap_roughness
+	
+	
 	aiSSurface.base_color_shader = source.texmap_diffuse
 	aiSSurface.base_connected = source.texmap_diffuse_on
 
@@ -144,6 +150,17 @@ fn SetBaseColor aiSSurface source =
 	-- aiSSurface.indirect_diffuse = source.
 )
 	
+fn SetReflection aiSSurface source =
+(	
+		aiSSurface.metalness = source.texmap_metalness_multiplier
+		aiSSurface.metalness_connected = source.texmap_metalness_on
+		aiSSurface.metalness_shader = source.texmap_metalness
+
+
+)	
+
+
+
 fn SetSpecialMaps aiSSurface source =
 (
 	-- Normal takes original Bump map through a Bump2D shader 
@@ -185,6 +202,8 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 
 	SetBaseColor aiSSurface source
 	SetSpecialMaps aiSSurface source
+	SetReflection aiSSurface source
+	
 	-- Functions	
 
 	aiSSurface
