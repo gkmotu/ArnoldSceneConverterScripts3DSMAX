@@ -131,11 +131,11 @@ fn SetBaseColor aiSSurface source =
 ( 
 	aiSSurface.base_color = source.diffuse
 	
+	aiSSurface.base_shader = source.texmap_diffuse
 
 
 
 	-- aiSSurface.base = source.base_weight
-	-- aiSSurface.base_shader = source.base_weight_map
 	-- aiSSurface.base_connected = source.base_weight_map_on
 	
 	
