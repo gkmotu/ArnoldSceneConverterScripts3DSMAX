@@ -16,6 +16,7 @@ Vray to Arnold material
 - Added bump to normal conversion, and additonal node is created here.
 - Opacity slot wired up.
 - Diffuse slot wired up.
+- Diffuse color wired up.
 
 
 26.12.2018
