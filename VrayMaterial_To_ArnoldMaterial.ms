@@ -1,24 +1,19 @@
-/* The scripts should always contain at least 10 functions :
-	ScriptID, 
-	DisplaySourceName(), 
-	SourceSuperClassID(), 
-	SourceClassID(), 
-	DisplayDestinationName() 
-	DestinationSuperClassID(), 
-	DestinationClassID(), 
-	AboutText() and 
-	DefaultConversion, Conversion taking a param.
-	
-This script will have all aiSSurface Surface parameters within a function group, and some lines will be commented-out if params are not represented in the source material
-	
-*/
+/*  
 
-/* Class IDs"
- as reported by $.material.classid as string
+Vray to Arnold Material converter script.
 
- Physical Material Source:		"#(1030429932L, 3735928833L)"
- Arnold Standard Destination:	"#(2121471519L, 1660373836L)"
- 
+v0.1a
+14th August 2019
+
+Supported slots and functions:
+
+- Diffuse color
+- Diffuse Texture
+- Opacity
+- Bump to Normal ( an additional Arnold bump2D node is added. )
+
+gkmotu@gmail.com for bugs
+
 */
 
 --Script ID that will append to destination
