@@ -130,13 +130,12 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 	aiSSurface.base_color = source.diffuse
-	
-	aiSSurface.base_shader = source.texmap_diffuse
-
+	aiSSurface.base_color_shader = source.texmap_diffuse
+	aiSSurface.base_connected = source.texmap_diffuse_on
 
 
 	-- aiSSurface.base = source.base_weight
-	-- aiSSurface.base_connected = source.base_weight_map_on
+	
 	
 	
 	-- aiSSurface.base_color_shader = source.base_color_map
