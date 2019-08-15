@@ -6,8 +6,11 @@
 
                                              Tested in 3DS MAX 2020 before upload.
                                   Conversion rules are continously added and improved over time.
-                                         If you got a request, email gkmotu@gmail.com
+                                         
                                
+
+
+                                               requests & Bugs gkmotu@gmail.com
 
 
 Vray and Corona material conversion guide.
