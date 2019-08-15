@@ -20,6 +20,8 @@ Corona to Arnold material
 - Diffuse texture
 - Specular
 - Bump to Normal, an additonal node is created here.
+- Opacity color
+- Opacity texture
 
 
 14.9.2019
