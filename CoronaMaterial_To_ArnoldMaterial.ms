@@ -1,18 +1,6 @@
 /*  
 Corona to Arnold Material converter script.
 
-v0.1a
-15th August 2019
-
-Supported slots and functions:
-
-- Diffuse color
-- Diffuse Texture
-- Bump to Normal ( an additional Arnold bump2D node is added. )
-- Specular
-
-gkmotu@gmail.com for bugs
-
 */
 
 --Script ID that will append to destination
@@ -128,6 +116,11 @@ fn SetBaseColor aiSSurface source =
 	aiSSurface.base_color = source.colorDiffuse
 	aiSSurface.base_color_shader = source.texmapDiffuse
 	aiSSurface.specular_shader = source.texmapReflect
+
+	aiSSurface.emission = 1.0 -- hack
+	aiSSurface.emission_color_shader = source.texmapSelfIllum
+	aiSSurface.emission_color_connected = source.texmapOnSelfIllum
+
 	
 )
 
