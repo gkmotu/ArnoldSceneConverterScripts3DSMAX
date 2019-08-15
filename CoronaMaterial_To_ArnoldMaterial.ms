@@ -146,6 +146,10 @@ fn SetSpecialMaps aiSSurface source =
 		aiSSurface.normal_shader = Bump2DMap
 	)
 	
+	aiSSurface.opacity = source.colorOpacity
+	aiSSurface.opacity_connected = source.texmapOnOpacity
+	aiSSurface.opacity_shader = source.texmapOpacity
+	
 
 )
 
