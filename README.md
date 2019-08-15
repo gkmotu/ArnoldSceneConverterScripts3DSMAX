@@ -22,6 +22,7 @@ Corona to Arnold material
 - Bump to Normal, an additonal node is created here.
 - Opacity color
 - Opacity texture
+- SelfIllumination to Emission
 
 
 14.9.2019
