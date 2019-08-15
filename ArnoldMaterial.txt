@@ -1,0 +1,166 @@
+  .base : float
+  .base_connected : boolean
+  .base_shader : texturemap
+  .base_color : RGB color
+  .base_color_connected : boolean
+  .base_color_shader : texturemap
+  .diffuse_roughness : float
+  .diffuse_roughness_connected : boolean
+  .diffuse_roughness_shader : texturemap
+  .specular : float
+  .specular_connected : boolean
+  .specular_shader : texturemap
+  .specular_color : RGB color
+  .specular_color_connected : boolean
+  .specular_color_shader : texturemap
+  .specular_roughness : float
+  .specular_roughness_connected : boolean
+  .specular_roughness_shader : texturemap
+  .specular_IOR : float
+  .specular_IOR_connected : boolean
+  .specular_IOR_shader : texturemap
+  .specular_anisotropy : float
+  .specular_anisotropy_connected : boolean
+  .specular_anisotropy_shader : texturemap
+  .specular_rotation : float
+  .specular_rotation_connected : boolean
+  .specular_rotation_shader : texturemap
+  .metalness : float
+  .metalness_connected : boolean
+  .metalness_shader : texturemap
+  .transmission : float
+  .transmission_connected : boolean
+  .transmission_shader : texturemap
+  .transmission_color : RGB color
+  .transmission_color_connected : boolean
+  .transmission_color_shader : texturemap
+  .transmission_depth : float
+  .transmission_depth_connected : boolean
+  .transmission_depth_shader : texturemap
+  .transmission_scatter : RGB color
+  .transmission_scatter_connected : boolean
+  .transmission_scatter_shader : texturemap
+  .transmission_scatter_anisotropy : float
+  .transmission_scatter_anisotropy_connected : boolean
+  .transmission_scatter_anisotropy_shader : texturemap
+  .transmission_dispersion : float
+  .transmission_dispersion_connected : boolean
+  .transmission_dispersion_shader : texturemap
+  .transmission_extra_roughness : float
+  .transmission_extra_roughness_connected : boolean
+  .transmission_extra_roughness_shader : texturemap
+  .transmit_aovs : boolean
+  .subsurface : float
+  .subsurface_connected : boolean
+  .subsurface_shader : texturemap
+  .subsurface_color : RGB color
+  .subsurface_color_connected : boolean
+  .subsurface_color_shader : texturemap
+  .subsurface_radius : RGB color
+  .subsurface_radius_connected : boolean
+  .subsurface_radius_shader : texturemap
+  .subsurface_scale : float
+  .subsurface_scale_connected : boolean
+  .subsurface_scale_shader : texturemap
+  .subsurface_anisotropy : float
+  .subsurface_anisotropy_connected : boolean
+  .subsurface_anisotropy_shader : texturemap
+  .subsurface_type : integer
+  .sheen : float
+  .sheen_connected : boolean
+  .sheen_shader : texturemap
+  .sheen_color : RGB color
+  .sheen_color_connected : boolean
+  .sheen_color_shader : texturemap
+  .sheen_roughness : float
+  .sheen_roughness_connected : boolean
+  .sheen_roughness_shader : texturemap
+  .thin_walled : boolean
+  .normal : point3
+  .normal_connected : boolean
+  .normal_shader : texturemap
+  .tangent : point3
+  .tangent_connected : boolean
+  .tangent_shader : texturemap
+  .coat : float
+  .coat_connected : boolean
+  .coat_shader : texturemap
+  .coat_color : RGB color
+  .coat_color_connected : boolean
+  .coat_color_shader : texturemap
+  .coat_roughness : float
+  .coat_roughness_connected : boolean
+  .coat_roughness_shader : texturemap
+  .coat_IOR : float
+  .coat_IOR_connected : boolean
+  .coat_IOR_shader : texturemap
+  .coat_anisotropy : float
+  .coat_anisotropy_connected : boolean
+  .coat_anisotropy_shader : texturemap
+  .coat_rotation : float
+  .coat_rotation_connected : boolean
+  .coat_rotation_shader : texturemap
+  .coat_normal : point3
+  .coat_normal_connected : boolean
+  .coat_normal_shader : texturemap
+  .coat_affect_color : float
+  .coat_affect_color_connected : boolean
+  .coat_affect_color_shader : texturemap
+  .coat_affect_roughness : float
+  .coat_affect_roughness_connected : boolean
+  .coat_affect_roughness_shader : texturemap
+  .thin_film_thickness : float
+  .thin_film_thickness_connected : boolean
+  .thin_film_thickness_shader : texturemap
+  .thin_film_IOR : float
+  .thin_film_IOR_connected : boolean
+  .thin_film_IOR_shader : texturemap
+  .emission : float
+  .emission_connected : boolean
+  .emission_shader : texturemap
+  .emission_color : RGB color
+  .emission_color_connected : boolean
+  .emission_color_shader : texturemap
+  .opacity : RGB color
+  .opacity_connected : boolean
+  .opacity_shader : texturemap
+  .caustics : boolean
+  .internal_reflections : boolean
+  .exit_to_background : boolean
+  .indirect_diffuse : float
+  .indirect_specular : float
+  .aov_id1 : string
+  .id1 : RGB color
+  .id1_connected : boolean
+  .id1_shader : texturemap
+  .aov_id2 : string
+  .id2 : RGB color
+  .id2_connected : boolean
+  .id2_shader : texturemap
+  .aov_id3 : string
+  .id3 : RGB color
+  .id3_connected : boolean
+  .id3_shader : texturemap
+  .aov_id4 : string
+  .id4 : RGB color
+  .id4_connected : boolean
+  .id4_shader : texturemap
+  .aov_id5 : string
+  .id5 : RGB color
+  .id5_connected : boolean
+  .id5_shader : texturemap
+  .aov_id6 : string
+  .id6 : RGB color
+  .id6_connected : boolean
+  .id6_shader : texturemap
+  .aov_id7 : string
+  .id7 : RGB color
+  .id7_connected : boolean
+  .id7_shader : texturemap
+  .aov_id8 : string
+  .id8 : RGB color
+  .id8_connected : boolean
+  .id8_shader : texturemap
+  .TheList : maxObject array
+  .Shader_Version : integer
+false
