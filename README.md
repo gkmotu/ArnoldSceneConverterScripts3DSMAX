@@ -9,7 +9,7 @@
 
 
 
-requests & Bugs gkmotu@gmail.com
+Bugs & requests gkmotu@gmail.com
 
 Vray and Corona material conversion guide.
 
