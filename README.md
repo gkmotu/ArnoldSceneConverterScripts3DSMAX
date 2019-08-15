@@ -11,13 +11,23 @@ If you got a request, email gkmotu@gmail.com
 
 Change Log:
 
+15.9.2019
+
+Corona to Arnold material
+
+- Diffuse color
+- Diffuse texture
+- Specular
+- Bump to Normal, an additonal node is created here.
+
+
 14.9.2019
 
 Vray to Arnold material
 
 - Diffuse roughness supported.
 - Metalness supported.
-- Added bump to normal conversion, and additonal node is created here.
+- Bump to Normal, an additonal node is created here.
 - Opacity slot wired up.
 - Diffuse slot wired up.
 - Diffuse color wired up.
