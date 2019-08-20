@@ -20,6 +20,14 @@ Vray and Corona material conversion guide.
 
 Change Log:
 
+20.8.2019
+
+Vray to Arnold Material.
+
+- Specular RGB color
+- Specular Roughness Float 0-1
+- Specular Texture map
+
 15.9.2019
 
 Corona to Arnold material
