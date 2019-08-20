@@ -17,16 +17,36 @@ Vray and Corona material conversion guide.
 
 
 
+Supported slots and features on Vray material:
+
+Date updated - 20.08.2019
+
+- Diffuse RGB Color
+- Diffuse texture
+- Diffuse map on/off
+- Diffuse roughness float
+- Roughness texture
+- Diffuse roughness map on/off
+- Emission color
+- Emission float
+- Emission texture
+- Emission map on/off
+- Specular RGB Color
+- Specular roughness float
+- Specular texture
+- Specular map on/off
+- Specular roughness texture
+- Specular rouhness map on/off
+- Specular IOR
+- Metalness float
+- Metalness texture
+- Metalness map on/off
+- Opacity texture
+- Opacity map on/off
+
 
 Change Log:
 
-20.8.2019
-
-Vray to Arnold Material.
-
-- Specular RGB color
-- Specular Roughness Float 0-1
-- Specular Texture map
 
 15.8.2019
 
@@ -41,25 +61,9 @@ Corona to Arnold material
 - SelfIllumination to Emission
 
 
-14.8.2019
-
-Vray to Arnold material
-
-- Diffuse roughness supported.
-- Metalness supported.
-- Bump to Normal, an additonal node is created here.
-- Opacity slot wired up.
-- Diffuse slot wired up.
-- Diffuse color wired up.
-
-
 26.12.2018
 
 - Legacy Checker to OSL Checker.
-
-19.12.2018
-
-- Vray Material to Arnold Material.
 
 18.12.2018
 
