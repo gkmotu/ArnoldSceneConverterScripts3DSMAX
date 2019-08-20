@@ -43,6 +43,8 @@ Date updated - 20.08.2019
 - Metalness map on/off
 - Opacity texture
 - Opacity map on/off
+- Normal texture
+- Normal map on/off
 
 
 Change Log:
