@@ -28,7 +28,7 @@ Vray to Arnold Material.
 - Specular Roughness Float 0-1
 - Specular Texture map
 
-15.9.2019
+15.8.2019
 
 Corona to Arnold material
 
@@ -41,7 +41,7 @@ Corona to Arnold material
 - SelfIllumination to Emission
 
 
-14.9.2019
+14.8.2019
 
 Vray to Arnold material
 
