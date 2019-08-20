@@ -50,6 +50,8 @@ Date updated - 20.08.2019
 - rotation map on/off
 - Anisotropy float
 - Anisotropy rotation float
+- Normal texture
+- Normal map on/off
 
 
 
