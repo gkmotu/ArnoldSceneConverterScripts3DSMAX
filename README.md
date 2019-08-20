@@ -16,6 +16,39 @@ Vray and Corona material conversion guide.
 ![](overview.gif)
 
 
+Supported slots and features on Corona material:
+
+Date updated - 20.08.2019
+
+- Diffuse RGB color
+- Specular RGB color
+- Transmission RGB color
+- Opacity RGB color
+- Base float
+- Reflect float
+- Transmission float
+- Diffuse texture
+- Specular texture
+- Roughness texture
+- Transmission texture
+- Transmission extra roughness texture
+- Opacity texture
+- IOR texture
+- Emission texture	
+- Diffuse map on/off
+- Specular map on/off
+- Transmission on/off
+- Specular map on/off
+- Opacity map on/off
+- Extra roughness map on/off
+- Opacity map on/off
+- Emission map on/off
+- Anisotropy map on/off
+- rotation map on/off
+- Anisotropy float
+- Anisotropy rotation float
+
+
 
 Supported slots and features on Vray material:
 
@@ -48,31 +81,3 @@ Date updated - 20.08.2019
 - Transmission RGB color
 - Transmission texture
 - Transmission map on/off
-
-
-
-
-Corona to Arnold material
-
-Date updated - 15.8.2019
-
-- Diffuse color
-- Diffuse texture
-- Specular
-- Bump to Normal, an additonal node is created here.
-- Opacity color
-- Opacity texture
-- SelfIllumination to Emission
-
-
-26.12.2018
-
-- Legacy Checker to OSL Checker.
-
-18.12.2018
-
-- Legacy Bitmap to Arnold Image() - filename.
-- Standard Scanline Material to Arnold Material - Diffuse & Opacity.
-
-
-
