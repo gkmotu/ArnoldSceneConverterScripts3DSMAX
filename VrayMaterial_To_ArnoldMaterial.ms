@@ -124,30 +124,40 @@ fn AboutText =
 /* aiSSurface Basic Params Group */
 fn SetBaseColor aiSSurface source =
 ( 
-	aiSSurface.base_color = source.diffuse
+	aiSSurface.base_color 				= source.diffuse				-- Diffuse RGB Color
+	aiSSurface.base_color_shader 			= source.texmap_diffuse				-- Diffuse Texture
+	aiSSurface.base_connected 			= source.texmap_diffuse_on			-- Map on/off
+
+	aiSSurface.diffuse_roughness 			= source.diffuse_roughness			-- Diffuse roughness Float
+	aiSSurface.diffuse_roughness_shader 		= source.texmap_roughness			-- Roughness Texture
+	aiSSurface.diffuse_roughness_connected 		= source.texmap_roughness_on			-- Map on/off
 	
-	aiSSurface.diffuse_roughness = source.texmap_roughness_multiplier
-	aiSSurface.diffuse_roughness_connected = source.texmap_roughness_on
-	aiSSurface.diffuse_roughness_shader = source.texmap_roughness
+
+	aiSSurface.emission_color 			= source.selfIllumination			-- Emission color
+	aiSSurface.emission				= source.selfIllumination_multiplier		-- Emission float
+	aiSSurface.emission_color_shader		= source.texmap_self_illumination		-- Emission Texture
+	aiSSurface.emission_color_connected		= source.texmap_self_illumination_on		-- Map on/off
+
+	-- Specular color needs to go to Arnold float as well
+	aiSSurface.specular_color 			= source.reflection				-- Specular RGB Color
+	aiSSurface.specular_roughness 			= source.reflection_glossiness			-- Specular Roughness float
+	aiSSurface.specular_color_shader		= source.texmap_reflection			-- Specular Texture
+	aiSSurface.specular_color_connected		= source.texmap_reflection_on			-- Map on/off
+
+	aiSSurface.specular_roughness_shader		= source.texmap_reflectionGlossiness		-- Specular Roughness Texture
+	aiSSurface.specular_roughness_connected		= source.texmap_reflectionGlossiness_on		-- Map on/off
+
+	aiSSurface.specular_IOR				= source.reflection_ior				-- Specular IOR
+	aiSSurface.metalness				= source.reflection_metalness			-- Metalness float
+	aiSSurface.metalness_connected 			= source.texmap_metalness_on			-- Map on/off
+	aiSSurface.metalness_shader 			= source.texmap_metalness			-- Metalness Texture
 	
-	
-	aiSSurface.base_color_shader = source.texmap_diffuse
-	aiSSurface.base_connected = source.texmap_diffuse_on
+	aiSSurface.opacity_shader 			= source.texmap_opacity				-- Opacity Texture
+	aiSSurface.opacity_connected 			= source.texmap_opacity_on			-- Map on/off
+
 
 )
 	
-fn SetReflection aiSSurface source =
-(	
-		 
-		aiSSurface.metalness_connected = 	source.texmap_metalness_on
-		aiSSurface.metalness_shader = 		source.texmap_metalness
-
-		aiSSurface.metalness = 	0.0
-
-		aiSSurface.specular_color = source.reflection
-		aiSSurface.specular_roughness = source.reflection_glossiness
-		aiSSurface.specular_roughness_shader = source.texmap_reflectionGlossiness
-)	
 
 
 
@@ -167,10 +177,6 @@ fn SetSpecialMaps aiSSurface source =
 	
 	aiSSurface.normal_connected = source.texmap_bump_on
 	
-    
-	
-	aiSSurface.opacity_shader = source.texmap_opacity
-	aiSSurface.opacity_connected = source.texmap_opacity_on
 )
 
 	
@@ -191,7 +197,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 
 	SetBaseColor aiSSurface source
 	SetSpecialMaps aiSSurface source
-	SetReflection aiSSurface source
+	
 	
 	-- Functions	
 
