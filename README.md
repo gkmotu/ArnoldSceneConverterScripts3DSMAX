@@ -16,6 +16,9 @@ Vray and Corona material conversion guide.
 ![](overview.gif)
 
 
+
+
+
 Supported slots and features on Corona material:
 
 Date updated - 20.08.2019
@@ -47,6 +50,10 @@ Date updated - 20.08.2019
 - rotation map on/off
 - Anisotropy float
 - Anisotropy rotation float
+
+
+
+
 
 
 
