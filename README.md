@@ -17,7 +17,7 @@ Vray and Corona material conversion guide.
 
 
 
-Supported slots and features on Vray material:
+[b]Supported slots and features on Vray material:[/b]
 
 Date updated - 20.08.2019
 
