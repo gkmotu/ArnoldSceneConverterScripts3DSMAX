@@ -149,9 +149,13 @@ fn SetBaseColor aiSSurface source =
 
 	aiSSurface.specular_IOR				= source.reflection_ior				-- Specular IOR
 	aiSSurface.metalness				= source.reflection_metalness			-- Metalness float
-	aiSSurface.metalness_connected 			= source.texmap_metalness_on			-- Map on/off
 	aiSSurface.metalness_shader 			= source.texmap_metalness			-- Metalness Texture
-	
+	aiSSurface.metalness_connected 			= source.texmap_metalness_on			-- Map on/off
+
+	aiSSurface.transmission_color			= source.refraction				-- Transmission RGB color
+	aiSSurface.transmission_shader			= source.texmap_refraction			-- Transmission texture
+	aiSSurface.transmission_connected		= source.texmap_refraction_on				-- Transmission map on/off
+
 	aiSSurface.opacity_shader 			= source.texmap_opacity				-- Opacity Texture
 	aiSSurface.opacity_connected 			= source.texmap_opacity_on			-- Map on/off
 
