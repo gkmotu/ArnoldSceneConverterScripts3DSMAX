@@ -17,7 +17,7 @@ Vray and Corona material conversion guide.
 
 
 
-[b]Supported slots and features on Vray material:[/b]
+Supported slots and features on Vray material:
 
 Date updated - 20.08.2019
 
@@ -50,12 +50,11 @@ Date updated - 20.08.2019
 - Transmission map on/off
 
 
-Change Log:
 
-
-15.8.2019
 
 Corona to Arnold material
+
+Date updated - 15.8.2019
 
 - Diffuse color
 - Diffuse texture
