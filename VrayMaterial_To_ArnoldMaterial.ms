@@ -7,8 +7,6 @@ v0.1a
 
 Supported slots and functions:
 
-- Metalness
-- Diffuse Roughness
 - Diffuse color
 - Diffuse Texture
 - Opacity
@@ -136,29 +134,19 @@ fn SetBaseColor aiSSurface source =
 	aiSSurface.base_color_shader = source.texmap_diffuse
 	aiSSurface.base_connected = source.texmap_diffuse_on
 
-
-	-- aiSSurface.base = source.base_weight
-	
-	
-	
-	-- aiSSurface.base_color_shader = source.base_color_map
-	-- aiSSurface.base_color_connected = source.base_color_map_on
-	
-	-- aiSSurface.diffuse_roughness = source.diff_roughness
-	-- aiSSurface.diffuse_roughness_shader = source.diff_rough_map
-	-- aiSSurface.diffuse_roughness_connected = source.diff_rough_map_on
-	
-	-- aiSSurface.caustics = source. 
-	-- aiSSurface.indirect_diffuse = source.
 )
 	
 fn SetReflection aiSSurface source =
 (	
-		aiSSurface.metalness = source.texmap_metalness_multiplier
-		aiSSurface.metalness_connected = source.texmap_metalness_on
-		aiSSurface.metalness_shader = source.texmap_metalness
+		 
+		aiSSurface.metalness_connected = 	source.texmap_metalness_on
+		aiSSurface.metalness_shader = 		source.texmap_metalness
 
+		aiSSurface.metalness = 	0.0
 
+		aiSSurface.specular_color = source.reflection
+		aiSSurface.specular_roughness = source.reflection_glossiness
+		aiSSurface.specular_roughness_shader = source.texmap_reflectionGlossiness
 )	
 
 
@@ -180,7 +168,6 @@ fn SetSpecialMaps aiSSurface source =
 	aiSSurface.normal_connected = source.texmap_bump_on
 	
     
-	
 	
 	aiSSurface.opacity_shader = source.texmap_opacity
 	aiSSurface.opacity_connected = source.texmap_opacity_on
