@@ -113,13 +113,42 @@ fn AboutText =
 
 fn SetBaseColor aiSSurface source =
 ( 
-	aiSSurface.base_color = source.colorDiffuse
-	aiSSurface.base_color_shader = source.texmapDiffuse
-	aiSSurface.specular_shader = source.texmapReflect
+	aiSSurface.base_color 				= source.colorDiffuse			-- Diffuse RGB color
+	aiSSurface.specular_color			= source.colorReflect			-- Specular RGB color
+	aiSSurface.transmission_color			= source.colorRefract			-- Transmission RGB color
+	aiSSurface.opacity				= source.colorOpacity			-- Opacity RGB color
+	
+	aiSSurface.base					= source.levelDiffuse			-- Base float
+	aiSSurface.specular				= source.levelReflect			-- Reflect float
+	aiSSurface.transmission				= source.levelRefract			-- Transmission float
+	
+	aiSSurface.base_shader				= source.texmapDiffuse			-- Diffuse texture
+	aiSSurface.specular_shader			= source.texmapReflect			-- Specular texture
+	aiSSurface.specular_roughness_shader		= source.texmapReflectGlossiness	-- Roughness texture
+	aiSSurface.transmission_shader			= source.texmapRefract			-- Transmission texture
+	aiSSurface.transmission_extra_roughness_shader	= source.texmapRefractGlossiness	-- Transmission extra roughness texture
+	aiSSurface.opacity_shader			= source.texmapOpacity			-- Opacity texture
+	aiSSurface.specular_IOR_shader			= source.texmapior			-- IOR texture
+	aiSSurface.emission_shader			= source.texmapSelfIllum		-- Emission texture
+	
+	aiSSurface.base_color_connected			= source.texmapOnDiffuse		-- Diffuse map on/off
+	aiSSurface.specular_connected			= source.texmapOnReflect		-- Specular map on/off
+	aiSSurface.transmission_connected		= source.texmapOnRefract		-- Transmission on/off
+	aiSSurface.specular_roughness_connected		= source.texmapOnReflectGlossiness	-- Specular map on/off
+	aiSSurface.opacity_connected 			= source.texmapOnOpacity		-- Opacity map on/off
+	aiSSurface.transmission_extra_roughness_connected = source.texmapOnRefractGlossiness	-- Extra roughness map on/off
+	aiSSurface.opacity_connected			= source.texmapOnOpacity		-- Opacity map on/off
+	aiSSurface.emission_color_connected		= source.texmapOnSelfIllum		-- Emission map on/off
+	aiSSurface.specular_anisotropy_connected	= source.texmapOnAnisotropy		-- Anisotropy map on/off
+	aiSSurface.specular_rotation_connected		= source.texmapOnAnisotropyRotation	-- Anisotropy rotation map on/off
 
-	aiSSurface.emission = 1.0 -- hack
-	aiSSurface.emission_color_shader = source.texmapSelfIllum
-	aiSSurface.emission_color_connected = source.texmapOnSelfIllum
+	aiSSurface.specular_anisotropy			= source.anisotropy			-- Anisotropy float
+	
+	Radian convert 0-1
+	aiSSurface.specular_rotation			= source.anisotropyRotation		-- Anisotropy rotation float
+
+	
+		
 
 	
 )
@@ -139,9 +168,7 @@ fn SetSpecialMaps aiSSurface source =
 		aiSSurface.normal_shader = Bump2DMap
 	)
 	
-	aiSSurface.opacity = source.colorOpacity
-	aiSSurface.opacity_connected = source.texmapOnOpacity
-	aiSSurface.opacity_shader = source.texmapOpacity
+	
 	
 
 )
