@@ -45,6 +45,9 @@ Date updated - 20.08.2019
 - Opacity map on/off
 - Normal texture
 - Normal map on/off
+- Transmission RGB color
+- Transmission texture
+- Transmission map on/off
 
 
 Change Log:
