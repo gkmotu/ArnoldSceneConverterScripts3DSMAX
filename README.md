@@ -39,6 +39,12 @@ Supported slots and features from Vray:
 
 Date updated - 21.08.2019
 
+VrayNormalMap:
+
+- Normal texture
+- Normal map on/off
+- Strength 
+
 Vray2SidedMtl:
 
 - Front
