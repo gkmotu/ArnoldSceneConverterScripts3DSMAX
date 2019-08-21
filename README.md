@@ -11,6 +11,11 @@
 
 Bugs & requests gkmotu@gmail.com
 
+Correctly installed Preset file with 3 entries automatically load.
+![](Vray_status.jpg)
+
+
+
 Vray and Corona material conversion guide.
 
 Use the VrayToArnold PRESET file, to automatically load all available materials, shaders and light conversion rules.
