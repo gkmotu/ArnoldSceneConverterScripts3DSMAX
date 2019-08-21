@@ -13,6 +13,11 @@ Bugs & requests gkmotu@gmail.com
 
 Vray and Corona material conversion guide.
 
+Use the VrayToArnold PRESET file, to automatically load all available materials, shaders and light conversion rules.
+https://github.com/gkmotu/ArnoldSceneConverterScripts3DSMAX/blob/master/VrayToArnold.ms
+
+
+
 ![](overview.gif)
 
 
