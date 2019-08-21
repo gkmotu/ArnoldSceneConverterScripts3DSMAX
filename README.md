@@ -117,7 +117,11 @@ Date updated - 20.08.2019
 - Normal map on/off
 
 
+LEGACY MAX Items:
 
+Legacy Color Correct map.
+
+- Input texture
 
 
 
