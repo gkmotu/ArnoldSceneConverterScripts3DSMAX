@@ -21,6 +21,16 @@ Vray and Corona material conversion guide.
 Use the VrayToArnold PRESET file, to automatically load all available materials, shaders and light conversion rules.
 https://github.com/gkmotu/ArnoldSceneConverterScripts3DSMAX/blob/master/VrayToArnold.ms
 
+The PRESET file will automatically add:
+
+- Vray Material to Arnold Material
+- Vray 2 sided material to Arnold two sided material
+- Vray Normal map to Arnold Normal map
+- Convert Legacy 3dsmax CC node to Arnold Color Correct node
+- Convert Legacy ( and slow ) 3DS MAX bitmap to Arnold Image ( mip mapping, .tx )
+
+
+
 Remember to download and install the script files at the right location.
 You can find the location easily:
 
