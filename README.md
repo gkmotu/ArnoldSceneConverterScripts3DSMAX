@@ -16,6 +16,44 @@ Vray and Corona material conversion guide.
 ![](overview.gif)
 
 
+Supported slots and features from Vray:
+
+Date updated - 21.08.2019
+
+Vray2SidedMtl:
+
+- Front
+- Back
+
+VrayMtl:
+
+- Diffuse RGB Color
+- Diffuse texture
+- Diffuse map on/off
+- Diffuse roughness float
+- Roughness texture
+- Diffuse roughness map on/off
+- Emission color
+- Emission float
+- Emission texture
+- Emission map on/off
+- Specular RGB Color
+- Specular roughness float
+- Specular texture
+- Specular map on/off
+- Specular roughness texture
+- Specular rouhness map on/off
+- Specular IOR
+- Metalness float
+- Metalness texture
+- Metalness map on/off
+- Opacity texture
+- Opacity map on/off
+- Normal texture
+- Normal map on/off
+- Transmission RGB color
+- Transmission texture
+- Transmission map on/off
 
 
 
@@ -59,34 +97,3 @@ Date updated - 20.08.2019
 
 
 
-Supported slots and features on Vray material:
-
-Date updated - 20.08.2019
-
-- Diffuse RGB Color
-- Diffuse texture
-- Diffuse map on/off
-- Diffuse roughness float
-- Roughness texture
-- Diffuse roughness map on/off
-- Emission color
-- Emission float
-- Emission texture
-- Emission map on/off
-- Specular RGB Color
-- Specular roughness float
-- Specular texture
-- Specular map on/off
-- Specular roughness texture
-- Specular rouhness map on/off
-- Specular IOR
-- Metalness float
-- Metalness texture
-- Metalness map on/off
-- Opacity texture
-- Opacity map on/off
-- Normal texture
-- Normal map on/off
-- Transmission RGB color
-- Transmission texture
-- Transmission map on/off
