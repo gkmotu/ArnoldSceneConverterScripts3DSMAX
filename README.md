@@ -19,7 +19,6 @@ Correctly installed Preset file with 3 entries automatically load.
 Vray and Corona material conversion guide.
 
 Use the VrayToArnold PRESET file, to automatically load all available materials, shaders and light conversion rules.
-https://github.com/gkmotu/ArnoldSceneConverterScripts3DSMAX/blob/master/VrayToArnold.ms
 
 The PRESET file will automatically add:
 
@@ -32,14 +31,9 @@ The PRESET file will automatically add:
 
 
 Remember to download and install the script files at the right location.
-You can find the location easily:
 
-- Open Scene converter
-- Push load in top right corner
-- Notice the folder name that opens.
-
-It will open the folder where all preset files are located. put the preset file there and put the actual conversion scripts in the ConversionScripts folder that lies next to the preset folder.
-
+HERE is an archive with the location, sitting in your Documents folder.
+https://github.com/gkmotu/ArnoldSceneConverterScripts3DSMAX/blob/master/VrayCoronaLegacyToArnoldConverterScripts.zip
 
 
 ![](overview.gif)
