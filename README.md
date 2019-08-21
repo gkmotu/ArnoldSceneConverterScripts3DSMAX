@@ -35,6 +35,8 @@ Remember to download and install the script files at the right location.
 HERE is an archive with the location, sitting in your Documents folder.
 https://github.com/gkmotu/ArnoldSceneConverterScripts3DSMAX/blob/master/VrayCoronaLegacyToArnoldConverterScripts.zip
 
+NOTE: You can use any version of 3DS MAX as long as it has the Scene converter in it.
+
 
 ![](overview.gif)
 
