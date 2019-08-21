@@ -119,7 +119,7 @@ Date updated - 20.08.2019
 
 LEGACY MAX Items:
 
-Legacy Color Correct map.
+Legacy Color Correct map to Arnold Color Correct map.
 
 - Input texture
 
