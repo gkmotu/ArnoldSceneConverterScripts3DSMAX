@@ -87,7 +87,7 @@ VrayMtl:
 - Emission texture
 - Emission map on/off
 - Specular RGB Color
-- Specular roughness float
+- Specular roughness float 
 - Specular texture
 - Specular map on/off
 - Specular roughness texture
@@ -154,10 +154,6 @@ Legacy Bitmap to Arnold Image.
 
 
 
-Known issues and things:
-
-- Roughness is flipped
-- Update Legacy to Arnold CC node conversion with input from 卢家洛
 
 
 
