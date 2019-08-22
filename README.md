@@ -157,9 +157,13 @@ Legacy Color Correct map to Arnold Color Correct map.
 - Saturation
 
 
+
+
 Legacy Bitmap to Arnold Image.
 
 - update shader and update this.
+
+
 
 
 Legacy Checker to OSL Checker
