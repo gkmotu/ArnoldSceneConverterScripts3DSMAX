@@ -45,6 +45,19 @@ Supported slots and features from Vray:
 
 Date updated - 21.08.2019
 
+VrayDirt:
+
+- Invert normal
+- Black
+- Black on/off
+- Black texture
+- White
+- White on/off
+- White texture
+- Falloff float
+- Inclusive on/off
+
+
 VrayNormalMap:
 
 - Normal texture
