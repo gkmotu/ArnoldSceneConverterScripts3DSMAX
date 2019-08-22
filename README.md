@@ -11,6 +11,10 @@
 
 Bugs & requests gkmotu@gmail.com
 
+Contributions by:
+卢家洛,Mads Dørschler.
+
+
 Correctly installed Preset file with 7 entries automatically load.
 ![](VrayStatus.jpg)
 
@@ -142,6 +146,20 @@ LEGACY MAX Items:
 Legacy Color Correct map to Arnold Color Correct map.
 
 - Input texture
+
+
+Legacy Bitmap to Arnold Image.
+
+- update shader and update this.
+
+
+
+Known issues and things:
+
+- Roughness is flipped
+- Update Legacy to Arnold CC node conversion with input from 卢家洛
+
+
 
 
 
