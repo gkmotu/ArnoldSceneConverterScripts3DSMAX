@@ -12,7 +12,7 @@
 Bugs & requests gkmotu@gmail.com
 
 Correctly installed Preset file with 3 entries automatically load.
-![](Vray_status.jpg)
+
 
 
 
