@@ -91,7 +91,7 @@ VrayMtl:
 - Emission texture
 - Emission map on/off
 - Specular RGB Color
-- Specular roughness float                // flip this
+- Specular roughness float 
 - Specular texture
 - Specular map on/off
 - Specular roughness texture
@@ -173,5 +173,9 @@ Legacy Checker to OSL Checker
 
 
 
+TODO:
+
+- Specular_roughness invert
+- Update Legacy bitmap rules
 
 
