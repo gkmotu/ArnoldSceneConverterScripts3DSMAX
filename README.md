@@ -150,6 +150,11 @@ LEGACY MAX Items:
 Legacy Color Correct map to Arnold Color Correct map.
 
 - Input texture
+- Exposure
+- Gamma
+- Hue
+- Add
+- Saturation
 
 
 Legacy Bitmap to Arnold Image.
