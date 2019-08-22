@@ -1,4 +1,10 @@
-                          
+      Main panic area:
+      
+      - Specular_roughness is flipped
+      - update the bitmap rule to port more settings
+      - update the cc rule to port more settings
+      
+      
                           
                                                   Scene converter scripts for
                                                            
