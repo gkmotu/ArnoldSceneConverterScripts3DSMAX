@@ -44,7 +44,7 @@ NOTE: You can use any version of 3DS MAX as long as it has the Scene converter i
 
 Supported slots and features from Vray:
 
-Date updated - 21.08.2019
+Date updated - 22.08.2019
 
 VrayDirt:
 
