@@ -157,7 +157,9 @@ Legacy Bitmap to Arnold Image.
 - update shader and update this.
 
 
+Legacy Checker to OSL Checker
 
+- update shader and update this.
 
 
 
