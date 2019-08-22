@@ -117,11 +117,15 @@ fn SetBaseColor aiSSurface source =
 ( 
 	aiSSurface.input_shader				= source.map					-- Input map
 	aiSSurface.input				= source.color					-- fRGBA color
-	--aiSSurface.gamma				= source.gainRGB				-- Gamma float
-	--aiSSurface.contrast				= source.contrast				-- Contrast float
-	--aiSSurface.saturation				= source.saturation				-- Saturatin float
-	
-	
+
+	-- Contributed by Jialuo
+	aiSSurface.exposure 				= (source.gainRGB/100-1)			-- Exposure
+	aiSSurface.gamma 				= source.gammaRGB				-- Gamma
+	aiSSurface.hue_shift 				= (source.hueShift/360)				-- Hue
+	aiSSurface.add 					= (color source.liftR 0 source.liftB)*255	-- Add
+	aiSSurface.saturation 				= (source.saturation/100+1)			-- Saturation
+	-- 
+
 )
 	
 
