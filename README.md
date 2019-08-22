@@ -91,7 +91,7 @@ VrayMtl:
 - Emission texture
 - Emission map on/off
 - Specular RGB Color
-- Specular roughness float 
+- Specular roughness float                // flip this
 - Specular texture
 - Specular map on/off
 - Specular roughness texture
