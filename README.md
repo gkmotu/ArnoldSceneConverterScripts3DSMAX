@@ -1,8 +1,4 @@
-      Main panic area:
-      
-      - Specular_roughness is flipped
-      - update the bitmap rule to port more settings
-      - update the cc rule to port more settings
+
       
       
                           
@@ -12,6 +8,8 @@
 
                                              Tested in 3DS MAX 2020 before upload.
                                   Conversion rules are continously added and improved over time.
+
+
 
 
 
