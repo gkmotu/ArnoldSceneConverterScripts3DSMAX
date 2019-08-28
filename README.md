@@ -147,6 +147,19 @@ Date updated - 20.08.2019
 
 LEGACY MAX Items:
 
+Legacy Mix map to Arnold Mix RGBA.
+
+- Input Texture 1
+- Input RGB Color 1
+- Input Texture 2
+- Input RGB Color 2
+- Mix input
+- Mix amount
+
+Legacy Vertex Color map to Arnold User RGB map.
+
+- Vertex channel
+
 Legacy Color Correct map to Arnold Color Correct map.
 
 - Input texture
