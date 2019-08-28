@@ -113,7 +113,12 @@ fn ConvertFrom_BitmapTextureToArnoldImage Source Dest =
 		return undefined
 	)
 	----- Put stuff here
-	Dest.filename = Source.fileName
+	(
+		Dest.filename = Source.fileName
+	
+	for tmap in (getClassInstances BitmapTexture) while (tmap.bitmap.inputGamma == 1.0) do (
+		Dest.color_space = 1)
+	)
 	----- Put stuff here
 )
 
