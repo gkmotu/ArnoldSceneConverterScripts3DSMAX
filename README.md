@@ -161,7 +161,8 @@ Legacy Color Correct map to Arnold Color Correct map.
 
 Legacy Bitmap to Arnold Image.
 
-- update shader and update this.
+- Texture input
+- Color space ( gamma )
 
 
 
