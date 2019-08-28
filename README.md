@@ -167,6 +167,8 @@ Legacy Bitmap to Arnold Image.
 
 
 
+TO OSL.
+
 Legacy Checker to OSL Checker
 
 - update shader and update this.
@@ -177,6 +179,6 @@ Legacy Checker to OSL Checker
 TODO:
 
 - Specular_roughness invert
-- Update Legacy bitmap rules
+
 
 
