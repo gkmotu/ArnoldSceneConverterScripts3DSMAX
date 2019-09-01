@@ -128,9 +128,7 @@ float Mixer ( float Mix, float Visibility )
 
 shader Layers
 	[[ 		
-				string help			=	"<h1><b>Layers</b></h1>"
-										"Get a copy before we run out!<br><br><b>"
-										"Photoshop layers in OSL, add your stacked layers workflow directly!</b><br>"
+				string help			=	"<b>Layers</b>"										
 	]]
 (
 	// Layer 10 inputs
@@ -139,14 +137,14 @@ shader Layers
 				string label 		= 	"10:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer10Mix = 0
+	color Layer10Mix = 0
 	[[ 
 				string label 		= 	"10:Mix"
 	]],
 	
 	float Visibility10 = 100.0
 	[[ 
-				string label 		= 	"10:Visibility",
+				string label 		= 	"10:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -154,7 +152,7 @@ shader Layers
 	int   Enable10 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"10:Visibility" 
+				string label 		= 	"10:Visibile" 
 	]],
 	
 	string BlendMode10 = "Normal" 
@@ -162,7 +160,7 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label		=	"10:Blend",
+		   		string label		=	"10:Blend Mode",
 		   		int editable		=	0 
 	]],
 	
@@ -172,14 +170,14 @@ shader Layers
 				string label 		= 	"9:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer9Mix = 0
+	color Layer9Mix = 0
 	[[ 
 				string label 		= 	"9:Mix"
 	]],
 	
 	float Visibility9 = 100.0
 	[[ 
-				string label 		= 	"9:Visibility",
+				string label 		= 	"9:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -187,7 +185,7 @@ shader Layers
 	int   Enable9 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"9:Visibility" 
+				string label 		= 	"9:Visibile" 
 	]],
 	
 	string BlendMode9 = "Normal" 
@@ -195,8 +193,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"9:Blend",
-		   		int editable			=	0 
+		   		string label		=	"9:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 8 inputs
@@ -205,14 +203,14 @@ shader Layers
 				string label 		= 	"8:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer8Mix = 0
+	color Layer8Mix = 0
 	[[ 
 				string label 		= 	"8:Mix"
 	]],
 	
 	float Visibility8 = 100.0
 	[[ 
-				string label 		= 	"8:Visibility",
+				string label 		= 	"8:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -220,7 +218,7 @@ shader Layers
 	int   Enable8 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"8:Visibility" 
+				string label 		= 	"8:Visibile" 
 	]],
 	
 	string BlendMode8 = "Normal" 
@@ -228,8 +226,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"8:Blend",
-		   		int editable			=	0 
+		   		string label		=	"8:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 7 inputs
@@ -238,14 +236,14 @@ shader Layers
 				string label 		= 	"7:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer7Mix = 0
+	color Layer7Mix = 0
 	[[ 
 				string label 		= 	"7:Mix"
 	]],
 	
 	float Visibility7 = 100.0
 	[[ 
-				string label 		= 	"7:Visibility",
+				string label 		= 	"7:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -253,7 +251,7 @@ shader Layers
 	int   Enable7 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"7:Visibility" 
+				string label 		= 	"7:Visibile" 
 	]],
 	
 	string BlendMode7 = "Normal" 
@@ -261,8 +259,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"7:Blend",
-		   		int editable			=	0 
+		   		string label		=	"7:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 6
@@ -271,14 +269,14 @@ shader Layers
 				string label 		= 	"6:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer6Mix = 0
+	color Layer6Mix = 0
 	[[ 
 				string label 		= 	"6:Mix"
 	]],
 	
 	float Visibility6 = 100.0
 	[[ 
-				string label 		= 	"6:Visibility",
+				string label 		= 	"6:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -286,7 +284,7 @@ shader Layers
 	int   Enable6 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"6:Visibility" 
+				string label 		= 	"6:Visibile" 
 	]],
 	
 	string BlendMode6 = "Normal" 
@@ -294,8 +292,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"6:Blend",
-		   		int editable			=	0 
+		   		string label		=	"6:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 5 inputs
@@ -304,14 +302,14 @@ shader Layers
 				string label 		= 	"5:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer5Mix = 0
+	color Layer5Mix = 0
 	[[ 
 				string label 		= 	"5:Mix"
 	]],
 	
 	float Visibility5 = 100.0
 	[[ 
-				string label 		= 	"5:Visibility",
+				string label 		= 	"5:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -319,7 +317,7 @@ shader Layers
 	int   Enable5 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"5:Visibility" 
+				string label 		= 	"5:Visibile" 
 	]],
 	
 	string BlendMode5 = "Normal" 
@@ -327,8 +325,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"5:Blend",
-		   		int editable			=	0 
+		   		string label		=	"5:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 4 inputs
@@ -337,14 +335,14 @@ shader Layers
 				string label 		= 	"4:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer4Mix = 0
+	color Layer4Mix = 0
 	[[ 
 				string label 		= 	"4:Mix"
 	]],
 	
 	float Visibility4 = 100.0
 	[[ 
-				string label 		= 	"4:Visibility",
+				string label 		= 	"4:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -352,7 +350,7 @@ shader Layers
 	int   Enable4 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"4:Visibility" 
+				string label 		= 	"4:Visibile" 
 	]],
 	
 	string BlendMode4 = "Normal" 
@@ -360,8 +358,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"4:Blend",
-		   		int editable			=	0 
+		   		string label		=	"4:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 3 inputs
@@ -370,14 +368,14 @@ shader Layers
 				string label 		= 	"3:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer3Mix = 0
+	color Layer3Mix = 0
 	[[ 
 				string label 		= 	"3:Mix"
 	]],
 	
 	float Visibility3 = 100.0
 	[[ 
-				string label 		= 	"3:Visibility",
+				string label 		= 	"3:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -385,7 +383,7 @@ shader Layers
 	int   Enable3 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"3:Visibility" 
+				string label 		= 	"3:Visibile" 
 	]],
 	
 	string BlendMode3 = "Normal" 
@@ -393,8 +391,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"3:Blend",
-		   		int editable			=	0 
+		   		string label		=	"3:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 2 inputs
@@ -403,7 +401,7 @@ shader Layers
 				string label 		= 	"2:Layer *MAIN INPUT*"
 	]],
 	
-	float Layer2Mix = 0
+	color Layer2Mix = 0
 	[[ 
 				string label 		= 	"2:Mix"
 	]],
@@ -411,7 +409,7 @@ shader Layers
 	
 	float Visibility2 = 100.0
 	[[ 
-				string label 		= 	"2:Visibility",
+				string label 		= 	"2:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -419,7 +417,7 @@ shader Layers
 	int   Enable2 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"2:Visibility" 
+				string label 		= 	"2:Visibile" 
 	]],
 	
 	string BlendMode2 = "Normal" 
@@ -427,8 +425,8 @@ shader Layers
 				string widget		=	"popup",
 		   		string help			= 	"Normal, Average, Darken, Multiply, Color Burn, Linear Burn, Lighten, Screen, Color Dodge, Linear Dodge, Spotlight, Spotlight Blend, Overlay, Hard Light, Soft Light, Pin Light, Hard Mix, Difference, Exclusion, Subtract, Divide, Hue, Saturation, Color, Value",
 		   		string options		= 	"Normal|Average|Darken|Multiply|Color Burn|Linear Burn|Lighten|Screen|Color Dodge|Linear Dodge|Spotlight|Spotlight Blend|Overlay|Hard Light|Soft Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Value",
-		   		string label			=	"2:Blend",
-		   		int editable			=	0 
+		   		string label		=	"2:Blend Mode",
+		   		int editable		=	0 
 	]],
 	
 	// Layer 1 inputs				
@@ -437,16 +435,16 @@ shader Layers
 				string label 		=	"1:Layer (Background)"
 	]],
 	
-	float Layer1Mix = 1.0
+	color Layer1Mix = 1.0
 	[[ 
 				string label 		= 	"1:Mix",
-				float min				=	0.0,
-				float max				=	1.0,
+				float min			=	0.0,
+				float max			=	1.0,
 	]],
 	
 	float Visibility1 = 100.0
 	[[ 
-				string label 		= 	"1:Visibility",
+				string label 		= 	"1:Visibile",
 				float min 			= 	0.0,
 				float max 			= 	100.0
 	]],
@@ -454,7 +452,7 @@ shader Layers
 	int   Enable1 = 1 
 	[[ 
 				string widget		=	"checkBox",
-				string label 		= 	"1:Visibility" 
+				string label 		= 	"1:Visibile" 
 	]],
 	
 	// RGB & Alpha outputs.
@@ -470,10 +468,10 @@ shader Layers
 	// Layer 1
 	if(Enable1)
 {
-	float Base_Alpha1 = Mixer( Layer1Mix,Visibility1);
+	float Base_Alpha1 = Mixer( Layer1Mix[0],Visibility1);
 	Out   = Out * (1.0 - Base_Alpha1);	
 	Alpha = Alpha * (1.0 - Base_Alpha1);
-	Alpha = Layer1Mix*Base_Alpha1;
+	Alpha = Layer1Mix[0]*Base_Alpha1;
 	topmul = Premult?1.0:Base_Alpha1;
 	Out   += Layer1 * topmul;
 }	
@@ -486,125 +484,125 @@ shader Layers
 	// Layer 2
 	if(Enable2)
 {
-	float Base_Alpha2 = Mixer( Layer2Mix,Visibility2);
+	float Base_Alpha2 = Mixer( Layer2Mix[0],Visibility2);
 	color l1 = Out;
 	Out   = Out * (1.0 - Base_Alpha2);	
 	Alpha = Alpha   * (1.0 - Base_Alpha2);
 	color blended2 = Blend ( BlendMode2, Layer2, l1 );
 	topmul = Premult?1.0:Base_Alpha2;
 	Out   += blended2 * topmul;
-	Alpha += Layer2Mix;	
+	Alpha += Layer2Mix[0];	
 }	
 	
 					
 	// Layer 3
 	if(Enable3)
 {
-	float Base_Alpha3 = Mixer( Layer3Mix,Visibility3);
+	float Base_Alpha3 = Mixer( Layer3Mix[0],Visibility3);
 	color l2 = Out;
 	Out   = Out * (1.0 - Base_Alpha3);	
 	Alpha = Alpha  * (1.0 - Base_Alpha3);
 	color blended3 = Blend ( BlendMode3, Layer3, l2 );
 	topmul = Premult?1.0:Base_Alpha3;
 	Out   += blended3 * topmul;
-	Alpha += Layer3Mix;	
+	Alpha += Layer3Mix[0];	
 }	
 	
 
 	// Layer 4
 	if(Enable4)
 {
-	float Base_Alpha4 = Mixer( Layer4Mix,Visibility4);
+	float Base_Alpha4 = Mixer( Layer4Mix[0],Visibility4);
 	color l3 = Out;
 	Out   = Out * (1.0 - Base_Alpha4);	
 	Alpha = Alpha  * (1.0 - Base_Alpha4);
 	color blended4 = Blend ( BlendMode4, Layer4, l3 );
 	topmul = Premult?1.0:Base_Alpha4;
 	Out   += blended4 * topmul;
-	Alpha += Layer4Mix;
+	Alpha += Layer4Mix[0];
 }
 	
 				
 	// Layer 5
 	if(Enable5)
 {
-	float Base_Alpha5 = Mixer( Layer5Mix,Visibility5);
+	float Base_Alpha5 = Mixer( Layer5Mix[0],Visibility5);
 	color l4 = Out;
 	Out   = Out * (1.0 - Base_Alpha5 );	
 	Alpha = Alpha  * (1.0 - Base_Alpha5);
 	color blended5 = Blend ( BlendMode5, Layer5, l4 );
 	topmul = Premult?1.0:Base_Alpha5;
 	Out   += blended5 * topmul;
-	Alpha += Layer5Mix;
+	Alpha += Layer5Mix[0];
 }
 	
 		
 	// Layer 6
 	if(Enable6)
 {
-	float Base_Alpha6 = Mixer( Layer6Mix,Visibility6);
+	float Base_Alpha6 = Mixer( Layer6Mix[0],Visibility6);
 	color l5 = Out;
 	Out   = Out * (1.0 - Base_Alpha6 );	
 	Alpha = Alpha  * (1.0 - Base_Alpha6 );
 	color blended6 = Blend ( BlendMode6, Layer6, l5 );
 	topmul = Premult?1.0:Base_Alpha6;
 	Out   += blended6 * topmul;
-	Alpha += Layer6Mix;
+	Alpha += Layer6Mix[0];
 }	
 	
 		
 	// Layer 7
 	if(Enable7)
 {
-	float Base_Alpha7 = Mixer( Layer7Mix,Visibility7);
+	float Base_Alpha7 = Mixer( Layer7Mix[0],Visibility7);
 	color l6 = Out;
 	Out   = Out * (1.0 - Base_Alpha7);	
 	Alpha = Alpha  * (1.0 - Base_Alpha7);
 	color blended7 = Blend ( BlendMode7, Layer7, l6 );
 	topmul = Premult?1.0:Base_Alpha7;
 	Out   += blended7 * topmul;
-	Alpha += Layer7Mix;
+	Alpha += Layer7Mix[0];
 }
 	
 		
 	// Layer 8
 	if(Enable8)
 {
-	float Base_Alpha8 = Mixer( Layer8Mix,Visibility8);
+	float Base_Alpha8 = Mixer( Layer8Mix[0],Visibility8);
 	color l7 = Out;
 	Out   = Out * (1.0 - Base_Alpha8);	
 	Alpha = Alpha  * (1.0 -Base_Alpha8);
 	color blended8 = Blend ( BlendMode8, Layer8, l7 );
 	topmul = Premult?1.0:Base_Alpha8;
 	Out   += blended8 * topmul;
-	Alpha += Layer8Mix;
+	Alpha += Layer8Mix[0];
 }
 	
 
 	// Layer 9
 	if(Enable9)
 {
-	float Base_Alpha9 = Mixer( Layer9Mix,Visibility9);
+	float Base_Alpha9 = Mixer( Layer9Mix[0],Visibility9);
 	color l8 = Out;
 	Out   = Out * (1.0 - Base_Alpha9);	
 	Alpha = Alpha  * (1.0 -Base_Alpha9);
 	color blended9 = Blend ( BlendMode9, Layer9, l8 );
 	topmul = Premult?1.0:Base_Alpha9;
 	Out   += blended9 * topmul;
-	Alpha += Layer9Mix;	
+	Alpha += Layer9Mix[0];	
 }
 	
 
 	// Layer 10
 	if(Enable10)
 {
-	float Base_Alpha10 = Mixer(Layer10Mix,Visibility10);
+	float Base_Alpha10 = Mixer(Layer10Mix[0],Visibility10);
 	color l9 = Out;
 	Out   = Out * (1.0 - Base_Alpha10);	
 	Alpha = Alpha  * (1.0 - Base_Alpha10);
 	color blended10 = Blend ( BlendMode10, Layer10, l9 );
 	topmul = Premult?1.0:Base_Alpha10;
 	Out   += blended10 * topmul;
-	Alpha += Layer10Mix;
+	Alpha += Layer10Mix[0];
 }
 }
