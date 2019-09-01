@@ -182,6 +182,14 @@ Legacy Bitmap to Arnold Image.
 
 TO OSL.
 
+Legacy Composit Map to OSL Layers
+
+in a 10 slot map:
+- All texture inputs
+- All Mask texture inputs
+- visibility
+
+
 Legacy Checker to OSL Checker
 
 - update shader and update this.
