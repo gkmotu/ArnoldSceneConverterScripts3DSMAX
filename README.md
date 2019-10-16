@@ -52,7 +52,14 @@ NOTE: You can use any version of 3DS MAX as long as it has the Scene converter i
 
 Supported slots and features from Vray:
 
-Date updated - 22.08.2019
+Date updated 16.10.2019
+
+VrayHDRI:****
+
+- filename
+
+**** This map will be replaced with an OSL map eventually.
+
 
 VrayDirt:
 
