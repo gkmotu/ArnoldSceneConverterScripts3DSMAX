@@ -156,8 +156,27 @@ fn SetBaseColor aiSSurface source =
 
 
 	--- Vray reflection color to float.
+	
+	
+	
+	if(source.refraction != undefined) do
+	(
+	aiSSurface.transmission = source.refraction.r/255
+	)
+	if(source.refraction == undefined) do
+	(
+	aiSSurface.transmission = 0
+	)
+	
+	
+	
+	
+	
+	
+	
 	vrayRefraction = source.refraction
-	aiSSurface.transmission = 1-source.refraction.r/255
+	
+	
 		
 		
 	aiSSurface.transmission_color			= vrayRefraction				-- Transmission RGB color
