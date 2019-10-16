@@ -20,7 +20,7 @@ Contributions by:
 
 
 Correctly installed Preset file with 7 entries automatically load.
-![](VrayStatus.jpg)
+![](VrayStatus.png)
 
 
 
