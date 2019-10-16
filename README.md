@@ -54,6 +54,14 @@ Supported slots and features from Vray:
 
 Date updated 16.10.2019
 
+Vray Light Material
+
+- Multiplier
+- Color
+- Map
+- Opacity on/off
+- Opacity map
+
 VrayHDRI:****
 
 - filename
