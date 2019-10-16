@@ -111,6 +111,7 @@ VrayMtl:
 - Opacity map on/off
 - Normal texture
 - Normal map on/off
+- Transmission ( fixed the missing color to float averaging to pull transmission )
 - Transmission RGB color
 - Transmission texture
 - Transmission map on/off
