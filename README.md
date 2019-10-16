@@ -19,7 +19,10 @@ Contributions by:
 卢家洛,Mads Drøschler.
 
 
-Correctly installed Preset file with 7 entries automatically load.
+Most recent package content updates.
+
+- bug #1 Vray transparency on glass failed to translate, it should work now.
+
 ![](VrayStatus.png)
 
 
