@@ -22,6 +22,13 @@ This effort eases the pain when you need to convert Vray & Corona scenes to Arno
 The effort also aims at optimizing very old and very very bad shader code, so that the viewport and Arnold can fetch changes and in general just work better and faster.
 Especially the composit map and the old legacy bitmap loaders are 2 very bad constructs! DON’T use them!
 
+INSTALLATION GUIDE!
+
+Download the self extracting .exe file to the default location and load the VrayToArnold.ms PRESET file.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]
+
+
 Supported features:
 
 Vray Materials:
