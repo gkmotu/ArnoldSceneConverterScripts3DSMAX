@@ -29,26 +29,30 @@ Vray Materials:
 - Vray material
 - Vray 2 sided material
 - Vray light material
-- Vray Shaders:
 
-Vray dirt map
-Vray HDRI map
-Vray normal map
-Vray Sky
+Vray Shaders:
+
+- Vray dirt map
+- Vray HDRI map
+- Vray normal map
+- Vray Sky
+
 Vray Lights:
 
-Vray Area light
-Vray portal light
-Vray disc light
-Vray mesh light
-Vray point light
+- Vray Area light
+- Vray portal light
+- Vray disc light
+- Vray mesh light
+- Vray point light
+
 Corona Materials:
 
-Corona material
+- Corona material
+
 Legacy Shaders:
 
-Legacy bitmap
-Legacy color correct
-Legacy composit map
-Legacy mix map
-Legacy vertex color
+- Legacy bitmap
+- Legacy color correct
+- Legacy composit map
+- Legacy mix map
+- Legacy vertex color
