@@ -28,7 +28,7 @@ INSTALLATION GUIDE!
 
 Download the self extracting .exe file to the default location and load the VrayToArnold.ms PRESET file.
 
-https://www.youtube.com/watch?v=dhV5yaSzjc8
+Watch this video: https://www.youtube.com/watch?v=dhV5yaSzjc8
 
 
 
