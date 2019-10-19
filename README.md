@@ -26,10 +26,10 @@ Supported features:
 
 Vray Materials:
 
-Vray material
-Vray 2 sided material
-Vray light material
-Vray Shaders:
+- Vray material
+- Vray 2 sided material
+- Vray light material
+- Vray Shaders:
 
 Vray dirt map
 Vray HDRI map
