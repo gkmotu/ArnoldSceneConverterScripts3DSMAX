@@ -18,7 +18,7 @@ Bugs & requests gkmotu@gmail.com
 Contributions by:
 卢家洛,Mads Drøschler.
 
-Latest update:
+<b>Latest update:</b>
 
 20 October 2019.
 – Added Vray Blend Material to Arnold Layer
