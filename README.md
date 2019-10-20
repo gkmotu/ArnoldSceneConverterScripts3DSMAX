@@ -20,8 +20,8 @@ Contributions by:
 
 <h1><b>Latest update:</b></h1>
 
-20 October 2019.
-– Added Vray Blend Material to Arnold Layer
+<h3><b>20 October 2019.</b></h3>
+<h2><b>– Added Vray Blend Material to Arnold Layer</h2></b>
 
 This effort eases the pain when you need to convert Vray & Corona scenes to Arnold.
 The effort also aims at optimizing very old and very very bad shader code, so that the viewport and Arnold can fetch changes and in general just work better and faster.
