@@ -40,6 +40,7 @@ Vray Materials:
 - Vray material
 - Vray 2 sided material
 - Vray light material
+- Vray Blend Material
 
 Vray Shaders:
 
