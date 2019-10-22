@@ -6,6 +6,8 @@
 // https://github.com/ADN-DevTech/3dsMax-OSL-Shaders/blob/master/LICENSE.txt
 
 color Blend
+[[
+	string category = "MDShaders" ]]
 (
 	string BlendMode,
 	color A, 
@@ -137,7 +139,7 @@ shader Layers
 				string label 		= 	"10:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer10Mix = 0
+	float Layer10Mix = 0
 	[[ 
 				string label 		= 	"10:Mix"
 	]],
@@ -170,7 +172,7 @@ shader Layers
 				string label 		= 	"9:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer9Mix = 0
+	float Layer9Mix = 0
 	[[ 
 				string label 		= 	"9:Mix"
 	]],
@@ -203,7 +205,7 @@ shader Layers
 				string label 		= 	"8:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer8Mix = 0
+	float Layer8Mix = 0
 	[[ 
 				string label 		= 	"8:Mix"
 	]],
@@ -236,7 +238,7 @@ shader Layers
 				string label 		= 	"7:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer7Mix = 0
+	float Layer7Mix = 0
 	[[ 
 				string label 		= 	"7:Mix"
 	]],
@@ -269,7 +271,7 @@ shader Layers
 				string label 		= 	"6:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer6Mix = 0
+	float Layer6Mix = 0
 	[[ 
 				string label 		= 	"6:Mix"
 	]],
@@ -302,7 +304,7 @@ shader Layers
 				string label 		= 	"5:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer5Mix = 0
+	float Layer5Mix = 0
 	[[ 
 				string label 		= 	"5:Mix"
 	]],
@@ -335,7 +337,7 @@ shader Layers
 				string label 		= 	"4:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer4Mix = 0
+	float Layer4Mix = 0
 	[[ 
 				string label 		= 	"4:Mix"
 	]],
@@ -368,7 +370,7 @@ shader Layers
 				string label 		= 	"3:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer3Mix = 0
+	float Layer3Mix = 0
 	[[ 
 				string label 		= 	"3:Mix"
 	]],
@@ -401,7 +403,7 @@ shader Layers
 				string label 		= 	"2:Layer *MAIN INPUT*"
 	]],
 	
-	color Layer2Mix = 0
+	float Layer2Mix = 0
 	[[ 
 				string label 		= 	"2:Mix"
 	]],
@@ -435,7 +437,7 @@ shader Layers
 				string label 		=	"1:Layer (Background)"
 	]],
 	
-	color Layer1Mix = 1.0
+	float Layer1Mix = 1.0
 	[[ 
 				string label 		= 	"1:Mix",
 				float min			=	0.0,
@@ -468,10 +470,10 @@ shader Layers
 	// Layer 1
 	if(Enable1)
 {
-	float Base_Alpha1 = Mixer( Layer1Mix[0],Visibility1);
+	float Base_Alpha1 = Mixer( Layer1Mix,Visibility1);
 	Out   = Out * (1.0 - Base_Alpha1);	
 	Alpha = Alpha * (1.0 - Base_Alpha1);
-	Alpha = Layer1Mix[0]*Base_Alpha1;
+	Alpha = Layer1Mix*Base_Alpha1;
 	topmul = Premult?1.0:Base_Alpha1;
 	Out   += Layer1 * topmul;
 }	
@@ -484,125 +486,125 @@ shader Layers
 	// Layer 2
 	if(Enable2)
 {
-	float Base_Alpha2 = Mixer( Layer2Mix[0],Visibility2);
+	float Base_Alpha2 = Mixer( Layer2Mix,Visibility2);
 	color l1 = Out;
 	Out   = Out * (1.0 - Base_Alpha2);	
 	Alpha = Alpha   * (1.0 - Base_Alpha2);
 	color blended2 = Blend ( BlendMode2, Layer2, l1 );
 	topmul = Premult?1.0:Base_Alpha2;
 	Out   += blended2 * topmul;
-	Alpha += Layer2Mix[0];	
+	Alpha += Layer2Mix;	
 }	
 	
 					
 	// Layer 3
 	if(Enable3)
 {
-	float Base_Alpha3 = Mixer( Layer3Mix[0],Visibility3);
+	float Base_Alpha3 = Mixer( Layer3Mix,Visibility3);
 	color l2 = Out;
 	Out   = Out * (1.0 - Base_Alpha3);	
 	Alpha = Alpha  * (1.0 - Base_Alpha3);
 	color blended3 = Blend ( BlendMode3, Layer3, l2 );
 	topmul = Premult?1.0:Base_Alpha3;
 	Out   += blended3 * topmul;
-	Alpha += Layer3Mix[0];	
+	Alpha += Layer3Mix;	
 }	
 	
 
 	// Layer 4
 	if(Enable4)
 {
-	float Base_Alpha4 = Mixer( Layer4Mix[0],Visibility4);
+	float Base_Alpha4 = Mixer( Layer4Mix,Visibility4);
 	color l3 = Out;
 	Out   = Out * (1.0 - Base_Alpha4);	
 	Alpha = Alpha  * (1.0 - Base_Alpha4);
 	color blended4 = Blend ( BlendMode4, Layer4, l3 );
 	topmul = Premult?1.0:Base_Alpha4;
 	Out   += blended4 * topmul;
-	Alpha += Layer4Mix[0];
+	Alpha += Layer4Mix;
 }
 	
 				
 	// Layer 5
 	if(Enable5)
 {
-	float Base_Alpha5 = Mixer( Layer5Mix[0],Visibility5);
+	float Base_Alpha5 = Mixer( Layer5Mix,Visibility5);
 	color l4 = Out;
 	Out   = Out * (1.0 - Base_Alpha5 );	
 	Alpha = Alpha  * (1.0 - Base_Alpha5);
 	color blended5 = Blend ( BlendMode5, Layer5, l4 );
 	topmul = Premult?1.0:Base_Alpha5;
 	Out   += blended5 * topmul;
-	Alpha += Layer5Mix[0];
+	Alpha += Layer5Mix;
 }
 	
 		
 	// Layer 6
 	if(Enable6)
 {
-	float Base_Alpha6 = Mixer( Layer6Mix[0],Visibility6);
+	float Base_Alpha6 = Mixer( Layer6Mix,Visibility6);
 	color l5 = Out;
 	Out   = Out * (1.0 - Base_Alpha6 );	
 	Alpha = Alpha  * (1.0 - Base_Alpha6 );
 	color blended6 = Blend ( BlendMode6, Layer6, l5 );
 	topmul = Premult?1.0:Base_Alpha6;
 	Out   += blended6 * topmul;
-	Alpha += Layer6Mix[0];
+	Alpha += Layer6Mix;
 }	
 	
 		
 	// Layer 7
 	if(Enable7)
 {
-	float Base_Alpha7 = Mixer( Layer7Mix[0],Visibility7);
+	float Base_Alpha7 = Mixer( Layer7Mix,Visibility7);
 	color l6 = Out;
 	Out   = Out * (1.0 - Base_Alpha7);	
 	Alpha = Alpha  * (1.0 - Base_Alpha7);
 	color blended7 = Blend ( BlendMode7, Layer7, l6 );
 	topmul = Premult?1.0:Base_Alpha7;
 	Out   += blended7 * topmul;
-	Alpha += Layer7Mix[0];
+	Alpha += Layer7Mix;
 }
 	
 		
 	// Layer 8
 	if(Enable8)
 {
-	float Base_Alpha8 = Mixer( Layer8Mix[0],Visibility8);
+	float Base_Alpha8 = Mixer( Layer8Mix,Visibility8);
 	color l7 = Out;
 	Out   = Out * (1.0 - Base_Alpha8);	
 	Alpha = Alpha  * (1.0 -Base_Alpha8);
 	color blended8 = Blend ( BlendMode8, Layer8, l7 );
 	topmul = Premult?1.0:Base_Alpha8;
 	Out   += blended8 * topmul;
-	Alpha += Layer8Mix[0];
+	Alpha += Layer8Mix;
 }
 	
 
 	// Layer 9
 	if(Enable9)
 {
-	float Base_Alpha9 = Mixer( Layer9Mix[0],Visibility9);
+	float Base_Alpha9 = Mixer( Layer9Mix,Visibility9);
 	color l8 = Out;
 	Out   = Out * (1.0 - Base_Alpha9);	
 	Alpha = Alpha  * (1.0 -Base_Alpha9);
 	color blended9 = Blend ( BlendMode9, Layer9, l8 );
 	topmul = Premult?1.0:Base_Alpha9;
 	Out   += blended9 * topmul;
-	Alpha += Layer9Mix[0];	
+	Alpha += Layer9Mix;	
 }
 	
 
 	// Layer 10
 	if(Enable10)
 {
-	float Base_Alpha10 = Mixer(Layer10Mix[0],Visibility10);
+	float Base_Alpha10 = Mixer(Layer10Mix,Visibility10);
 	color l9 = Out;
 	Out   = Out * (1.0 - Base_Alpha10);	
 	Alpha = Alpha  * (1.0 - Base_Alpha10);
 	color blended10 = Blend ( BlendMode10, Layer10, l9 );
 	topmul = Premult?1.0:Base_Alpha10;
 	Out   += blended10 * topmul;
-	Alpha += Layer10Mix[0];
+	Alpha += Layer10Mix;
 }
 }
