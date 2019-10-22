@@ -60,6 +60,7 @@ Vray Materials:
 
 Vray Shaders:
 
+- Vray Color ** Map has been rewritten in OSL
 - Vray dirt map
 - Vray HDRI map
 - Vray normal map
@@ -76,6 +77,15 @@ Vray Lights:
 Corona Materials:
 
 - Corona material
+
+Corona Shaders:
+
+- Corona AO
+- Corona Normal map
+- Corona Triplanar
+- Corona Color ** Map has been rewritten in OSL
+- Corona Bitmap
+
 
 Legacy Shaders:
 
