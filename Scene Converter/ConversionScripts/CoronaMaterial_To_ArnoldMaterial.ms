@@ -118,11 +118,11 @@ fn SetBaseColor aiSSurface source =
 	aiSSurface.transmission_color			= source.colorRefract			-- Transmission RGB color
 	aiSSurface.opacity				= source.colorOpacity			-- Opacity RGB color
 	
-	aiSSurface.base					= source.levelDiffuse			-- Base float
+	aiSSurface.base					= (source.levelDiffuse*8)/10			-- Base float
 	aiSSurface.specular				= source.levelReflect			-- Reflect float
 	aiSSurface.transmission				= source.levelRefract			-- Transmission float
 	
-	aiSSurface.base_shader				= source.texmapDiffuse			-- Diffuse texture
+	aiSSurface.base_color_shader				= source.texmapDiffuse			-- Diffuse texture
 	aiSSurface.specular_shader			= source.texmapReflect			-- Specular texture
 	aiSSurface.specular_roughness_shader		= source.texmapReflectGlossiness	-- Roughness texture
 	aiSSurface.transmission_shader			= source.texmapRefract			-- Transmission texture
