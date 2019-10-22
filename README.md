@@ -19,7 +19,8 @@ Contributions by:
 卢家洛,Mads Drøschler.
 
 <h1><b>Latest update: 22 October 2019.</b></h1>
-- Added Corona Color ***** This map has been rewritten in OSL and can be found in the MDShaders category 
+
+- Added Corona Color ***** This map has been rewritten in OSL and can be found in the MDShaders category
 - Added Vray Color ***** This map has been rewritten in OSL and can be found in the MDShaders category 
 - Fixed base color on Corona material
 - Added Corona AO to Arnold Ambient Occlusion
