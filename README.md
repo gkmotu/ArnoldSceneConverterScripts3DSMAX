@@ -18,8 +18,18 @@ Bugs & requests gkmotu@gmail.com
 Contributions by:
 卢家洛,Mads Drøschler.
 
-<h1><b>Latest update: 22 October 2019.</b></h1>
+<h1><b>Latest update: 25 October 2019.</b></h1>
 
+This should return better vegetation/leafs.
+
+- Corona Material, flipped refraction value
+- Enabled thin wall check
+- Enabled Corona Translucency map
+- Enabled Corona translucency level
+
+
+
+Update: 22.10.2019
 - Added Corona Color ***** This map has been rewritten in OSL and can be found in the MDShaders category
 - Added Vray Color ***** This map has been rewritten in OSL and can be found in the MDShaders category 
 - Fixed base color on Corona material
@@ -30,7 +40,7 @@ Contributions by:
 
 
 
-Added 20.10.2019
+Update 20.10.2019
 - Added Vray Blend Material to Arnold Layer
 - Fixed flipped Roughness value on Vray Material
 
