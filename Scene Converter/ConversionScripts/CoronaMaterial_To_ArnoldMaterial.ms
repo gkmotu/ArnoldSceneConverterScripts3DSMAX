@@ -120,7 +120,7 @@ fn SetBaseColor aiSSurface source =
 	
 	aiSSurface.base					= (source.levelDiffuse*8)/10			-- Base float
 	aiSSurface.specular				= source.levelReflect			-- Reflect float
-	aiSSurface.transmission				= source.levelRefract			-- Transmission float
+	aiSSurface.transmission				= 1-source.levelRefract			-- Transmission float
 	
 	aiSSurface.base_color_shader				= source.texmapDiffuse			-- Diffuse texture
 	aiSSurface.specular_shader			= source.texmapReflect			-- Specular texture
@@ -147,8 +147,9 @@ fn SetBaseColor aiSSurface source =
 	--Radian convert 0-1
 	aiSSurface.specular_rotation			= source.anisotropyRotation		-- Anisotropy rotation float
 
-	
-		
+	aiSSurface.thin_walled					= source.thin
+	aiSSurface.subsurface_color_shader		= source.texmapTranslucency
+	aiSSurface.subsurface 					= source.levelTranslucency	
 
 	
 )
