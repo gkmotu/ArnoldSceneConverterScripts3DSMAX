@@ -18,8 +18,6 @@ fn Setup =
 	SceneConverter.AddConversionRule #(0x70be6506L, 0x448931ddL) #(0x7e73161fL, 0x62f74b4cL) conversionType:1
 	-- Conversion from Vray 2 Sided Material to Arnold two sided Material
 	SceneConverter.AddConversionRule #(0x6066686aL, 0x11731b4bL) #(0x7e73161fL, 0x7ffd6281L) conversionType:1
-	-- Conversion from Vray Light Material to Arnold Standard Surface
-	SceneConverter.AddConversionRule #(0x7ccf263eL, 0x3f5b39b9L) #(0x7e73161fL, 0x62f74b4cL) conversionType:1
 	-- Conversion from Vray Material to Arnold Standard Surface
 	SceneConverter.AddConversionRule #(0x37bf3f2fL, 0x7034695cL) #(0x7e73161fL, 0x62f74b4cL) conversionType:1
 	-- Conversion from Vray Blend Material to Arnold Layer Material
@@ -56,6 +54,8 @@ fn Setup =
 	SceneConverter.AddConversionRule #(0x58f82b74L, 0x73b75d7fL) #(0x7f9a7b9dL, 0x6fcdf00dL) conversionType:1
 	-- Conversion from Vray Light  to Arnold Light
 	SceneConverter.AddConversionRule #(0x3c5575a1L, 0x5fd602dfL) #(0x6705f00dL, 0xca131d05L) conversionType:1
+	-- Conversion from Vray Light Material to Physical Material
+	SceneConverter.AddConversionRule #(0x7ccf263eL, 0x3f5b39b9L) #(0x3d6b1cecL, 0xdeadc001L) conversionType:1
 )
 
 fn RemoveInvalidElementFromScene =
@@ -71,7 +71,8 @@ fn ScriptsIncludes =
 fn PreConvert =
 (
 	--add here, as a string between double quotes, any Maxscript inscructions to apply before any conversion has started.
-	"							
+	"								
+	
 	
 	
 	
@@ -84,7 +85,8 @@ fn PreConvert =
 fn PostConvert =
 (
 	--add here, as a string between double quotes, any Maxscript inscructions to apply after all conversions have been applied.
-	"							
+	"								
+	
 	
 	
 	
