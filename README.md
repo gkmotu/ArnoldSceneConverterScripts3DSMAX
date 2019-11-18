@@ -18,7 +18,17 @@ Bugs & requests gkmotu@gmail.com
 Contributions by:
 卢家洛,Mads Drøschler.
 
-<h1><b>Latest update: 25 October 2019.</b></h1>
+<h1><b>Latest update: 18 November 2019.</b></h1>
+
+Convert Vray Light Material to Physical material
+
+- Texture map
+- Opacity map
+- Multiplier, accounting luminance scale.
+- Color
+
+
+Latest update: 25 October 2019.
 
 This should return better vegetation/leafs.
 
