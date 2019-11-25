@@ -1,1 +1,1 @@
-@for %%i in (%*) do "C:\ProgramData\Autodesk\ApplicationPlugins\MAXtoA\maketx.exe" -v %%i
+@for %%i in (%*) do "C:\ProgramData\Autodesk\ApplicationPlugins\MAXtoA_2020\maketx.exe" -v %%i
