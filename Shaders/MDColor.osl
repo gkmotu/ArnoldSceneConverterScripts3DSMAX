@@ -30,7 +30,7 @@ shader MDColor
 	
 	if ( Mode == "RGB" )
 	{
-	Out = Color;	
+	Out = RGB;	
 	}
 	
 	if ( Mode == "Kelvin" )

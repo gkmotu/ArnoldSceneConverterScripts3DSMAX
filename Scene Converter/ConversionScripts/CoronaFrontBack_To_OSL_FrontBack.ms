@@ -1,6 +1,7 @@
 /*  
 
-Vray Light Material to Arnold Material converter script.
+Coron Front Back shader to OSL Front back shader
+
 
 gkmotu@gmail.com for bugs
 
@@ -15,37 +16,37 @@ fn ScriptID =
 --Return the name to be display for the source in the Scene Converter UI
 fn DisplaySourceName =
 (
-	"Vray Light "
+	"Corona FrontBack"
 )
 
 --Returns the source class of the super class id 
 fn SourceSuperClassID =
 (
-	48 --Light
+	3088 --shader
 )
 
 --Returns the class id of the source class we use as a source for conversion
 fn SourceClassID =
 (
-	#(1012233633L, 1607860959L) --Vray Light  classid 
+	#(2882347111L, 2267239517L) --Corona FrontBack class id 
 )
 
 --Return the name to be display for the destination in the Scene Converter UI - must be in the order than the destination class ids
 fn DisplayDestinationName =
 (
-	"Arnold Light"
+	"OSL FrontBack"
 )
 
 --Returns the destination class of the super class id
 fn DestinationSuperClassID =
 (
-	48 --Light
+	3088 -- shader
 )
 --Returns the class id of the class we use as a destination for conversion
 -- so we convert from SourceClassID() to DestinationClassID()
 fn DestinationClassID =
 (
-	#(1728442381L, 3390250245L) --Arnold Light
+	#(2140830621L, 1875767309L) --OSL FrontBack class id
 )
 
 --Validate that the source provided match with one of the SourceClass
@@ -107,7 +108,7 @@ fn VerifyDestination destination =
 --Returns some information about this conversion script
 fn AboutText =
 (
-	"Converts a Vray Light to Arnold Light"
+	"Converts a Vray Blend material to an Arnold Layer Material"
 )
 
 
@@ -115,125 +116,18 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 	
-
-	-- General inits
 	
-	aiSSurface.alwaysVisibleinViewport = on
-
-	-- Area Light
+	aiSSurface.Front 		= source.frontColor
+	aiSSurface.Back			= source.backColor
 	
-	if ( 0 == source.type ) do 
-	(
-		aiSSurface.shapeType = 3
-		
-		aiSSurface.portal 						= source.skylightPortal 
-		aiSSurface.quadX 						= source.sizeLength
-		aiSSurface.quadY 						= source.sizeWidth
-		aiSSurface.exposure 					= 8.0f
-		aiSSurface.intensity 					= source.multiplier*10.0f
-		aiSSurface.lightShapeVisible			= on
-		aiSSurface.on 							= source.on								
-		aiSSurface.cast_shadows					= source.castShadows					
-		
-		aiSSurface.texmap						= source.texmap							
-		
-		-- aiSSurface.rotation 					= source.rotation
-		-- aiSSurface.pos 							= source.pos
-		
-		
-		if ( source.targeted == on ) do
-		(
-		aiSSurface.targeted = on
-		aiSSurface.pos = source.pos
-		aiSSurface.target.pos = source.target.pos
-		aiSSurface.targdist = source.target_distance		
-		)
-		
-		
-		if ( source.targeted == off ) do
-		(
-		aiSSurface.targeted = off
-		aiSSurface.rotation = source.rotation
-		aiSSurface.pos = source.pos
-		
-		aiSSurface.targdist = 1.0		
-		)
-		
-		
-		
-		if ( source.color_mode == 0 ) do
-		(
-		aiSSurface.usecolor 					= on
-		aiSSurface.color						= source.color							
-		)
-		
-		
-		if ( source.color_mode == 1 ) do
-		(
-		aiSSurface.usekelvin 					= on
-		aiSSurface.kelvin 						= source.color_temperature
-		
-		)
-		
-		if ( source.texmap_on == off ) do
-		(
-		aiSSurface.texmap 						= ()										-- We assume the reason to disable means the map does not need to transfer. Else..let me know if you need this.
-		
-		
-		)
-		
-		
-		
-		if ( source.nodecay == off ) do
-		(
-		aiSSurface.normalize 					= on
-		)
-		if ( source.nodecay == on ) do
-		(
-		aiSSurface.normalize 					= off
-		)
-		
-		
-				
-		
-	)
-	
-	-- Skydome Light
-	
-	if ( 1 == source.type ) do
-	(
-		aiSSurface.shapeType = 6
-	)
-	
-	
-	-- Point Light
-	
-	if ( 2 == source.type ) do 
-	(
-		aiSSurface.shapeType = 0
-	)
-	
-	
-	-- Mesh Light
-	
-	if ( 3 == source.type ) do 
-	(
-		aiSSurface.shapeType = 8
-		aiSSurface.lightMesh = source.mesh_source
-	
-	)
-	
-	
-	-- Disc Light
-	
-	if ( 4 == source.type ) do 
-	(
-		aiSSurface.shapeType = 4
-	)
-	
+	aiSSurface.front_map	= source.frontTexmap
+	aiSSurface.back_map		= source.backTexmap
 
 )
 	
+
+
+
 
 	
 --Internal function that does the parameter mapping
@@ -257,12 +151,19 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 	
 	-- Functions	
 
-	aiSSurface
+	
 )
 
-
-
-
+--This function is use as entry when the source is missing (due to a missing plugin) and cannot be completly loaded. 
+--In that case a default object is created and returned.
+fn DefaultConversion source /*Not used*/=
+(
+	--Create the aiSSurface material
+	newMat = OSL_FrontBack()
+	
+	--return the new material
+	newMat
+)
 
 --Main entry point from this script
 --This function handles the material's creation
@@ -274,10 +175,8 @@ fn Conversion sourceMat =
 		return undefined
 	)	
 	
-
-	
 	--Create the aiSSurface material
-	newMat = Arnold_Light()
+	newMat = OSL_FrontBack()
 	
 	--Call the parameters mapping function to convert
 	ConvertFromSourceToaiSSurface sourceMat newMat
@@ -285,38 +184,3 @@ fn Conversion sourceMat =
 	--return the new material
 	newMat
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

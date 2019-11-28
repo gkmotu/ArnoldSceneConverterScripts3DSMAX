@@ -1,6 +1,7 @@
 /*  
 
-Vray Light Material to Arnold Material converter script.
+Corona Layer Material to Arnold Layer Material converter script.
+
 
 gkmotu@gmail.com for bugs
 
@@ -15,37 +16,37 @@ fn ScriptID =
 --Return the name to be display for the source in the Scene Converter UI
 fn DisplaySourceName =
 (
-	"Vray Light "
+	"Corona Layer Material"
 )
 
 --Returns the source class of the super class id 
 fn SourceSuperClassID =
 (
-	48 --Light
+	3072 --Material
 )
 
 --Returns the class id of the source class we use as a source for conversion
 fn SourceClassID =
 (
-	#(1012233633L, 1607860959L) --Vray Light  classid 
+	#(1699243396L, 2217039182L) --Corona Layer Material classid 
 )
 
 --Return the name to be display for the destination in the Scene Converter UI - must be in the order than the destination class ids
 fn DisplayDestinationName =
 (
-	"Arnold Light"
+	"Arnold Layer Material"
 )
 
 --Returns the destination class of the super class id
 fn DestinationSuperClassID =
 (
-	48 --Light
+	3072 --Material
 )
 --Returns the class id of the class we use as a destination for conversion
 -- so we convert from SourceClassID() to DestinationClassID()
 fn DestinationClassID =
 (
-	#(1728442381L, 3390250245L) --Arnold Light
+	#(2121471519L, 3311509149L) --Arnold Layer Material
 )
 
 --Validate that the source provided match with one of the SourceClass
@@ -107,7 +108,7 @@ fn VerifyDestination destination =
 --Returns some information about this conversion script
 fn AboutText =
 (
-	"Converts a Vray Light to Arnold Light"
+	"Converts a Vray Blend material to an Arnold Layer Material"
 )
 
 
@@ -115,125 +116,57 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 	
+	-- Enable
+	aiSSurface.enable2 = source.layersOn[1]
+	aiSSurface.enable3 = source.layersOn[2]
+	aiSSurface.enable4 = source.layersOn[3]
+	aiSSurface.enable5 = source.layersOn[4]
+	aiSSurface.enable6 = source.layersOn[5]
+	aiSSurface.enable7 = source.layersOn[6]
+	aiSSurface.enable8 = source.layersOn[7]
+	
+	
+	
+	-- Mix amount
+	aiSSurface.mix2 = source.maskamounts[1]/100
+	aiSSurface.mix3 = source.maskamounts[2]/100
+	aiSSurface.mix4 = source.maskamounts[3]/100
+	aiSSurface.mix5 = source.maskamounts[4]/100
+	aiSSurface.mix6 = source.maskamounts[5]/100
+	aiSSurface.mix7 = source.maskamounts[6]/100
+	aiSSurface.mix8 = source.maskamounts[7]/100
+	
+	
+	-- Blend map
+	
+	aiSSurface.mix1_shader = source.mixmaps[1]
+	aiSSurface.mix2_shader = source.mixmaps[2]
+	aiSSurface.mix3_shader = source.mixmaps[3]
+	aiSSurface.mix4_shader = source.mixmaps[4]
+	aiSSurface.mix5_shader = source.mixmaps[5]
+	aiSSurface.mix6_shader = source.mixmaps[6]
+	aiSSurface.mix7_shader = source.mixmaps[7]
+	aiSSurface.mix8_shader = source.mixmaps[8]
+	
+	
+	
+	-- Material
+	aiSSurface.input1 = source.baseMtl
+	aiSSurface.input2 = source.layers[1]
+	aiSSurface.input3 = source.layers[2]
+	aiSSurface.input4 = source.layers[3]
+	aiSSurface.input5 = source.layers[4]
+	aiSSurface.input6 = source.layers[5]
+	aiSSurface.input7 = source.layers[6]
+	aiSSurface.input8 = source.layers[7]
+	
 
-	-- General inits
-	
-	aiSSurface.alwaysVisibleinViewport = on
-
-	-- Area Light
-	
-	if ( 0 == source.type ) do 
-	(
-		aiSSurface.shapeType = 3
-		
-		aiSSurface.portal 						= source.skylightPortal 
-		aiSSurface.quadX 						= source.sizeLength
-		aiSSurface.quadY 						= source.sizeWidth
-		aiSSurface.exposure 					= 8.0f
-		aiSSurface.intensity 					= source.multiplier*10.0f
-		aiSSurface.lightShapeVisible			= on
-		aiSSurface.on 							= source.on								
-		aiSSurface.cast_shadows					= source.castShadows					
-		
-		aiSSurface.texmap						= source.texmap							
-		
-		-- aiSSurface.rotation 					= source.rotation
-		-- aiSSurface.pos 							= source.pos
-		
-		
-		if ( source.targeted == on ) do
-		(
-		aiSSurface.targeted = on
-		aiSSurface.pos = source.pos
-		aiSSurface.target.pos = source.target.pos
-		aiSSurface.targdist = source.target_distance		
-		)
-		
-		
-		if ( source.targeted == off ) do
-		(
-		aiSSurface.targeted = off
-		aiSSurface.rotation = source.rotation
-		aiSSurface.pos = source.pos
-		
-		aiSSurface.targdist = 1.0		
-		)
-		
-		
-		
-		if ( source.color_mode == 0 ) do
-		(
-		aiSSurface.usecolor 					= on
-		aiSSurface.color						= source.color							
-		)
-		
-		
-		if ( source.color_mode == 1 ) do
-		(
-		aiSSurface.usekelvin 					= on
-		aiSSurface.kelvin 						= source.color_temperature
-		
-		)
-		
-		if ( source.texmap_on == off ) do
-		(
-		aiSSurface.texmap 						= ()										-- We assume the reason to disable means the map does not need to transfer. Else..let me know if you need this.
-		
-		
-		)
-		
-		
-		
-		if ( source.nodecay == off ) do
-		(
-		aiSSurface.normalize 					= on
-		)
-		if ( source.nodecay == on ) do
-		(
-		aiSSurface.normalize 					= off
-		)
-		
-		
-				
-		
-	)
-	
-	-- Skydome Light
-	
-	if ( 1 == source.type ) do
-	(
-		aiSSurface.shapeType = 6
-	)
-	
-	
-	-- Point Light
-	
-	if ( 2 == source.type ) do 
-	(
-		aiSSurface.shapeType = 0
-	)
-	
-	
-	-- Mesh Light
-	
-	if ( 3 == source.type ) do 
-	(
-		aiSSurface.shapeType = 8
-		aiSSurface.lightMesh = source.mesh_source
-	
-	)
-	
-	
-	-- Disc Light
-	
-	if ( 4 == source.type ) do 
-	(
-		aiSSurface.shapeType = 4
-	)
-	
 
 )
 	
+
+
+
 
 	
 --Internal function that does the parameter mapping
@@ -257,12 +190,19 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 	
 	-- Functions	
 
-	aiSSurface
+	
 )
 
-
-
-
+--This function is use as entry when the source is missing (due to a missing plugin) and cannot be completly loaded. 
+--In that case a default object is created and returned.
+fn DefaultConversion source /*Not used*/=
+(
+	--Create the aiSSurface material
+	newMat = ai_layer_shader()
+	
+	--return the new material
+	newMat
+)
 
 --Main entry point from this script
 --This function handles the material's creation
@@ -274,10 +214,8 @@ fn Conversion sourceMat =
 		return undefined
 	)	
 	
-
-	
 	--Create the aiSSurface material
-	newMat = Arnold_Light()
+	newMat = ai_layer_shader()
 	
 	--Call the parameters mapping function to convert
 	ConvertFromSourceToaiSSurface sourceMat newMat
@@ -285,38 +223,3 @@ fn Conversion sourceMat =
 	--return the new material
 	newMat
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
