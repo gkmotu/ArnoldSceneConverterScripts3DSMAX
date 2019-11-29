@@ -124,7 +124,6 @@ fn AboutText =
 /* aiSSurface Basic Params Group */
 fn SetBaseColor aiSSurface source =
 ( 
-	aiSSurface.base_weight = 1.0
 	aiSSurface.base_color 				= source.diffuse				-- Diffuse RGB Color
 	aiSSurface.base_color_shader 			= source.texmap_diffuse				-- Diffuse Texture
 	aiSSurface.base_connected 			= source.texmap_diffuse_on			-- Map on/off
