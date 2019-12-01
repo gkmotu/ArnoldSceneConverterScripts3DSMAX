@@ -14,6 +14,7 @@
 
 
 Bugs & requests gkmotu@gmail.com
+OR join the Discord channel "Arnold Converter"
 
 Contributions by:
 卢家洛,Mads Drøschler.
