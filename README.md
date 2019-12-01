@@ -13,8 +13,7 @@
 
 
 
-Bugs & requests gkmotu@gmail.com
-OR join the Discord channel "Arnold Converter"
+Bugs & requests gkmotu@gmail.com OR join the Discord channel "Arnold Converter" https://discord.gg/JDXwVD
 
 Contributions by:
 卢家洛,Mads Drøschler.
