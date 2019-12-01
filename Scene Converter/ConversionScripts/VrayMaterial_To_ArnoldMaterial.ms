@@ -187,28 +187,23 @@ fn SetBaseColor aiSSurface source =
 	aiSSurface.opacity_connected 			= source.texmap_opacity_on			-- Map on/off
 
 
+
+--------------------------------
+
+-- temp bump2D
+
+aiSSurface.normal_shader = source.texmap_bump
+		--aiSSurface.bump_map = 1.0
+		--aiSSurface.bump_height = source.texmap_bump_multiplier / 5.0f
+
+
+
+
+
 )
 	
 
 
-
-fn SetSpecialMaps aiSSurface source =
-(
-	-- Normal takes original Bump map through a Bump2D shader 
-	if(source.texmap_bump != undefined) do
-	(
-		local Bump2DMap = ai_bump2d name:"Bump"
-	
-		Bump2DMap.bump_map_shader = source.texmap_bump
-		Bump2DMap.bump_map = 1.0
-		Bump2DMap.bump_height = source.texmap_bump_multiplier / 5.0f -- look into calibrating.
-	
-		aiSSurface.normal_shader = Bump2DMap
-	)
-	
-	aiSSurface.normal_connected = source.texmap_bump_on
-	
-)
 
 	
 --Internal function that does the parameter mapping
@@ -227,7 +222,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 	-- Functions
 
 	SetBaseColor aiSSurface source
-	SetSpecialMaps aiSSurface source
+	
 	
 	
 	-- Functions	
