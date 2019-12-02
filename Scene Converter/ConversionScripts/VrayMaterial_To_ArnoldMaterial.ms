@@ -141,10 +141,21 @@ fn SetBaseColor aiSSurface source =
 	-- Specular color needs to go to Arnold float as well
 	aiSSurface.specular_color 			= source.reflection				-- Specular RGB Color
 	aiSSurface.specular_roughness 			= 1-source.reflection_glossiness			-- Specular Roughness float
+	
+
+	
+	
+	
 	aiSSurface.specular_color_shader		= source.texmap_reflection			-- Specular Texture
 	aiSSurface.specular_color_connected		= source.texmap_reflection_on			-- Map on/off
 
-	aiSSurface.specular_roughness_shader		= source.texmap_reflectionGlossiness		-- Specular Roughness Texture
+
+
+	newmap = OSL_ColorComp()
+	aiSSurface.specular_roughness_shader = newmap
+
+
+	aiSSurface.specular_roughness_shader.Input_map		= source.texmap_reflectionGlossiness		-- Specular Roughness Texture
 	aiSSurface.specular_roughness_connected		= source.texmap_reflectionGlossiness_on		-- Map on/off
 
 	aiSSurface.specular_IOR				= source.reflection_ior				-- Specular IOR
