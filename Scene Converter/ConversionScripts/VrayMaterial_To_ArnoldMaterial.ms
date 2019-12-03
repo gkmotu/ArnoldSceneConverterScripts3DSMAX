@@ -141,12 +141,16 @@ fn SetBaseColor aiSSurface source =
 	aiSSurface.specular_color_connected		= source.texmap_reflection_on			-- Map on/off
 
 
-
+	if( source.texmap_reflectionGlossiness !=undefined ) do
+	(
 	newmap = OSL_ColorComp()
 	aiSSurface.specular_roughness_shader = newmap
-
-
 	aiSSurface.specular_roughness_shader.Input_map		= source.texmap_reflectionGlossiness		-- Specular Roughness Texture
+
+	)
+	
+	
+
 	aiSSurface.specular_roughness_connected		= source.texmap_reflectionGlossiness_on		-- Map on/off
 
 	aiSSurface.specular_IOR				= source.reflection_ior				-- Specular IOR
