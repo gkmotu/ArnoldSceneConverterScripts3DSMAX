@@ -2,15 +2,6 @@
 
 Vray to Arnold Material converter script.
 
-v0.1a
-14th August 2019
-
-Supported slots and functions:
-
-- Diffuse color
-- Diffuse Texture
-- Opacity
-- Bump to Normal ( an additional Arnold bump2D node is added. )
 
 gkmotu@gmail.com for bugs
 
@@ -201,14 +192,39 @@ fn SetBaseColor aiSSurface source =
 
 --------------------------------
 
--- temp bump2D
+-- Normals, check if Legacy normal, Vray normal, Corona normal is present and convert, else stick in a bump2d node.
 
-aiSSurface.normal_shader = source.texmap_bump
-		--aiSSurface.bump_map = 1.0
-		--aiSSurface.bump_height = source.texmap_bump_multiplier / 5.0f
-
-
-
+	if (  classof source.texmap_bump == VRayNormalMap or classof source.texmap_bump == normal_bump or classof source.texmap_bump == coronanormal or source.texmap_bump ==undefined  ) then
+	(	
+		aiSSurface.normal_shader = source.texmap_bump
+	)	
+	
+	else
+	
+	(
+		local Bump2DMap = ai_bump2d name:"Bump"
+	
+		Bump2DMap.bump_map_shader = source.texmap_bump
+		Bump2DMap.bump_map = 1.0
+		Bump2DMap.bump_height = 1.0
+	
+		aiSSurface.normal_shader = Bump2DMap
+	
+	)
+	
+	
+	
+	/*
+	
+	
+	(	
+		newmap = ai_bump2d name:"Bump"
+		
+		aiSSurface.normal_shader = newmap
+		aiSSurface.normal_shader.bump_map_shader = source.texmap_bump
+	)	
+	
+	*/
 
 
 )
