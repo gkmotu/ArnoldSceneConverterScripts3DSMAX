@@ -66,6 +66,12 @@ fn Setup =
 	SceneConverter.AddConversionRule #(0x409517dfL, 0x3a5f44b6L) #(0x7e73161fL, 0x625bb28fL) conversionType:1
 	-- Conversion from Legacy Falloff to OSL Falloff
 	SceneConverter.AddConversionRule #(0x6ec3730cL, 0x0L) #(0x896ef2fcL, 0x44bd743fL) conversionType:1
+	-- Conversion from Vray OverrideMtl to Arnold Ray Switcher Material
+	SceneConverter.AddConversionRule #(0x15d20e6bL, 0x54e217ebL) #(0x7e73161fL, 0x4c074e86L) conversionType:1
+	-- Conversion from Vray EdgeTex to Arnold Round Corner
+	SceneConverter.AddConversionRule #(0x275b64b5L, 0x10d60363L) #(0x7e73161fL, 0xb965a235L) conversionType:1
+	-- Conversion from Legacy Checker to OSL Checker
+	SceneConverter.AddConversionRule #(0x200L, 0x0L) #(0x7f9a7b9dL, 0x6fcdf00dL) conversionType:1
 )
 
 fn RemoveInvalidElementFromScene =
@@ -81,7 +87,8 @@ fn ScriptsIncludes =
 fn PreConvert =
 (
 	--add here, as a string between double quotes, any Maxscript inscructions to apply before any conversion has started.
-	"					
+	"						
+	
 	
 	
 	
@@ -92,7 +99,8 @@ fn PreConvert =
 fn PostConvert =
 (
 	--add here, as a string between double quotes, any Maxscript inscructions to apply after all conversions have been applied.
-	"					
+	"						
+	
 	
 	
 	
