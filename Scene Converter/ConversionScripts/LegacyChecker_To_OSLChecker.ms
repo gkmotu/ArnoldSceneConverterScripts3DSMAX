@@ -1,6 +1,6 @@
 /*  
 
-Vray to Arnold Material converter script.
+Legacy Checker to OSL Checker  converter script.
 
 
 gkmotu@gmail.com for bugs
@@ -16,37 +16,37 @@ fn ScriptID =
 --Return the name to be display for the source in the Scene Converter UI
 fn DisplaySourceName =
 (
-	"Vray 2 Sided Material"
+	"Legacy Checker"
 )
 
 --Returns the source class of the super class id 
 fn SourceSuperClassID =
 (
-	3072 --Material
+	3088 --map
 )
 
 --Returns the class id of the source class we use as a source for conversion
 fn SourceClassID =
 (
-	#(1617324138L, 292756299L) --Vray 2 sided Material classid 
+	#(512L, 0L) --Legacy Checker classid 
 )
 
 --Return the name to be display for the destination in the Scene Converter UI - must be in the order than the destination class ids
 fn DisplayDestinationName =
 (
-	"Arnold two sided Material"
+	"OSL Checker"
 )
 
 --Returns the destination class of the super class id
 fn DestinationSuperClassID =
 (
-	3072 --Material
+	3088 --Map
 )
 --Returns the class id of the class we use as a destination for conversion
 -- so we convert from SourceClassID() to DestinationClassID()
 fn DestinationClassID =
 (
-	#(2121471519L, 2147312257L) --Arnold two sided Material
+	 #(2140830621L, 1875767309L) --OSL Checker classID
 )
 
 --Validate that the source provided match with one of the SourceClass
@@ -116,18 +116,13 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 
-	if ( source.backMtlOn == 0) then
-	(
-	aiSSurface.front 				= source.frontMtl				-- Front material
-	aiSSurface.back					= source.frontMtl				-- Back material
+	aiSSurface.Color1 = source.color2
+	aiSSurface.Color2 = source.color1
+	aiSSurface.Color1_map = source.map1
+	aiSSurface.Color2_map = source.map2
+	aiSSurface.Scale = 0.5
 	
 	
-	)
-	else
-	(
-	aiSSurface.front 				= source.frontMtl				-- Front material
-	aiSSurface.back					= source.backMtl				-- Back material
-	)
 	
 	
 )
@@ -165,7 +160,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 fn DefaultConversion source /*Not used*/=
 (
 	--Create the aiSSurface material
-	newMat = ai_two_sided()
+	newMat = OSL_Checker()
 	
 	--return the new material
 	newMat
@@ -182,7 +177,7 @@ fn Conversion sourceMat =
 	)	
 	
 	--Create the aiSSurface material
-	newMat = ai_two_sided()
+	newMat = OSL_Checker()
 	
 	--Call the parameters mapping function to convert
 	ConvertFromSourceToaiSSurface sourceMat newMat

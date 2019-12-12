@@ -1,6 +1,6 @@
 /*  
 
-Vray to Arnold Material converter script.
+Vray Override Mtl to Arnold Rayswitcher  converter script.
 
 
 gkmotu@gmail.com for bugs
@@ -16,7 +16,7 @@ fn ScriptID =
 --Return the name to be display for the source in the Scene Converter UI
 fn DisplaySourceName =
 (
-	"Vray 2 Sided Material"
+	"Vray OverrideMtl"
 )
 
 --Returns the source class of the super class id 
@@ -28,13 +28,13 @@ fn SourceSuperClassID =
 --Returns the class id of the source class we use as a source for conversion
 fn SourceClassID =
 (
-	#(1617324138L, 292756299L) --Vray 2 sided Material classid 
+	#(366087787L, 1424103403L) --Vray OverrideMtl classid 
 )
 
 --Return the name to be display for the destination in the Scene Converter UI - must be in the order than the destination class ids
 fn DisplayDestinationName =
 (
-	"Arnold two sided Material"
+	"Arnold Ray Switcher Material"
 )
 
 --Returns the destination class of the super class id
@@ -46,7 +46,7 @@ fn DestinationSuperClassID =
 -- so we convert from SourceClassID() to DestinationClassID()
 fn DestinationClassID =
 (
-	#(2121471519L, 2147312257L) --Arnold two sided Material
+	#(2121471519L, 1275547270L) --Arnold Ray switcher Material
 )
 
 --Validate that the source provided match with one of the SourceClass
@@ -116,18 +116,14 @@ fn AboutText =
 fn SetBaseColor aiSSurface source =
 ( 
 
-	if ( source.backMtlOn == 0) then
-	(
-	aiSSurface.front 				= source.frontMtl				-- Front material
-	aiSSurface.back					= source.frontMtl				-- Back material
+	aiSSurface.camera = source.baseMtl
+	aiSSurface.shadow = source.shadowMtl
+	aiSSurface.specular_reflection = source.reflectMtl
+	aiSSurface.specular_transmission = source.refractMtl	
+	aiSSurface.diffuse_reflection = source.giMtl
 	
 	
-	)
-	else
-	(
-	aiSSurface.front 				= source.frontMtl				-- Front material
-	aiSSurface.back					= source.backMtl				-- Back material
-	)
+	
 	
 	
 )
@@ -165,7 +161,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 fn DefaultConversion source /*Not used*/=
 (
 	--Create the aiSSurface material
-	newMat = ai_two_sided()
+	newMat = ai_ray_switch_shader()
 	
 	--return the new material
 	newMat
@@ -182,7 +178,7 @@ fn Conversion sourceMat =
 	)	
 	
 	--Create the aiSSurface material
-	newMat = ai_two_sided()
+	newMat = ai_ray_switch_shader()
 	
 	--Call the parameters mapping function to convert
 	ConvertFromSourceToaiSSurface sourceMat newMat
