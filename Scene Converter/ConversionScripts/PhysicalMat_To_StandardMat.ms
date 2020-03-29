@@ -1,6 +1,5 @@
 /*  
-Physical to Legacy Standard Material converter script.
-
+Corona to Arnold Material converter script.
 
 */
 
@@ -112,15 +111,60 @@ fn AboutText =
 /* aiSSurface Basic Params Group */
 
 
-fn SetBaseColor dest source  =
+fn SetBaseColor source dest  =
 ( 
---	aiSSurface.base_color 				= source.colorDiffuse			-- Diffuse RGB color
-dest.diffuse = source.base_color
-dest.diffuseMap = source.base_color_map
-dest.diffuseMapEnable = source.base_color_map_on
+
+
+fn ConvertDiffuseColorToBaseColor source dest = 
+(
+    dest.diffuse = source.base_color
+	dest.diffuseMap = source.base_color_map
+	dest.diffuseMapEnable = source.base_color_map_on
+)
+ConvertDiffuseColorToBaseColor dest source
+
+
+fn ConvertSpecularLevelToReflectivity source dest = 
+(
+    dest.specularlevel = source.reflectivity * 100
+    dest.specularLevelMap = source.reflectivity_map
+    dest.specularLevelMapEnable = source.reflectivity_map_on
+)
+
+ConvertSpecularLevelToReflectivity dest source
+
+
+fn ConvertGlossinessToRoughness source dest = 
+(
+   
+    dest.glossiness = source.roughness*100
+	dest.glossinessMap = source.roughness_map
+    dest.glossinessMapEnable = source.roughness_map_on
+)
+
+ConvertGlossinessToRoughness dest source
+
+
+fn ConvertOpacityToTransparency source dest = 
+(
+	
+	dest.opacity =  (source.transparency *100)
+    --Convert an opacity map to a cutout
+    dest.opacityMap    = source.cutout_map
+    dest.opacityMapEnable = source.cutout_map_on
+    
+    dest.filterColor = source.trans_color
+    dest.filterMap = source.trans_color_map
+    dest.filterMapEnable = source.trans_color_map_on  
+    
+    dest.ior = source.trans_ior
+)
+
+ConvertOpacityToTransparency dest source
 
 
 
+ 
 -- Normals, check if Legacy normal, Vray normal, Corona normal is present and convert, else stick in a bump2d node.
 /*
 if (  classof source.texmapBump == VRayNormalMap or classof source.texmapBump == normal_bump or classof source.texmapBump == coronanormal or source.texmapBump ==undefined  ) then
