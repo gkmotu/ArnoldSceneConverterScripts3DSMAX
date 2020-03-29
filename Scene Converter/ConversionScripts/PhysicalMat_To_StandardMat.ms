@@ -1,5 +1,6 @@
 /*  
-Corona to Arnold Material converter script.
+Physical to Legacy Standard Material converter script.
+
 
 */
 
