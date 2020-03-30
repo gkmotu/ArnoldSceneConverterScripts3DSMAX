@@ -1,5 +1,5 @@
 /*  
-Physical to Legacy Material converter script.
+Corona to Arnold Material converter script.
 
 */
 
@@ -147,8 +147,8 @@ ConvertGlossinessToRoughness dest source
 
 fn ConvertOpacityToTransparency source dest = 
 (
-	
-	dest.opacity =  (source.transparency *100)
+	dest.opacity = 100
+	-- dest.opacity =  (source.transparency *100)
     --Convert an opacity map to a cutout
     dest.opacityMap    = source.cutout_map
     dest.opacityMapEnable = source.cutout_map_on
