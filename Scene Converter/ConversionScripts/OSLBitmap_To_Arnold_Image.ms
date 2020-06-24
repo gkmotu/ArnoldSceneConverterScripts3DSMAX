@@ -1,6 +1,6 @@
 /*  
 
-OSL Bitmap to LArnold Image converter script.
+OSL Bitmap to Arnold Image converter script.
 
 gkmotu@gmail.com for bugs
 
