@@ -1,6 +1,6 @@
 /*  
 
-OSL Bitmap to Legacy Bitmap converter script.
+OSL Bitmap to LArnold Image converter script.
 
 gkmotu@gmail.com for bugs
 
