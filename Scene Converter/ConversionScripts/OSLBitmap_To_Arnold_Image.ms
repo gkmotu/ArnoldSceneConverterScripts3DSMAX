@@ -153,7 +153,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 fn DefaultConversion source /*Not used*/=
 (
 	--Create the aiSSurface material
-	newMat = ia_image()
+	newMat = ai_image()
 	
 	--return the new material
 	newMat
