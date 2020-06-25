@@ -27,7 +27,7 @@ fn SourceSuperClassID =
 --Returns the class id of the source class we use as a source for conversion
 fn SourceClassID =
 (
-	#(2140830621L, 1875767309L) --OSL Bitmap classid 
+	#(2305749756L, 1153266751L) --OSL Bitmap classid 
 )
 
 --Return the name to be display for the destination in the Scene Converter UI - must be in the order than the destination class ids
@@ -143,7 +143,7 @@ fn ConvertFromSourceToaiSSurface source aiSSurface =
 	newmap = OSL_UberBitmap()
 	aiSSurface.sourceMap = newmap
 */
-	aiSSurface.fileName = source.filename
+	aiSSurface.fileName = source.Source_Map.filename
 
 
 )
