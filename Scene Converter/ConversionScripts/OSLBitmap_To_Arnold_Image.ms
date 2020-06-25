@@ -107,7 +107,7 @@ fn VerifyDestination destination =
 --Returns some information about this conversion script
 fn AboutText =
 (
-	"Convert OSL Bitmap to Legacy Bitmap"
+	"Convert OSL Bitmap to Arnold Image"
 )
 
 
